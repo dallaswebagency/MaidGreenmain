@@ -318,7 +318,7 @@ button,input,select{font:inherit}
 .fr{background:var(--forest);color:#fff;padding:130px 0 120px;position:relative;overflow:hidden}
 .fr::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;right:-300px;top:-380px;background:radial-gradient(closest-side, rgba(140,198,63,.22), transparent)}
 .fr .eyebrow{color:var(--lime)}
-.fr-top{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;position:relative}
+.fr-top{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative}
 .fr .h2{margin:18px 0 22px}
 .fr .h2 em{color:var(--lime)}
 .fr .lead{color:#C2D4BE}
@@ -552,6 +552,20 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .promo .snd{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;background:var(--lime);color:var(--forest);font-weight:700;font-size:13px;border-radius:999px;padding:8px 14px}
 .promo .snd svg{width:16px;height:16px}
 
+/* franchise intro */
+.fr-pill{display:inline-flex;align-items:center;gap:12px;border:1.5px solid rgba(171,231,99,.45);background:rgba(171,231,99,.08);color:var(--lime);border-radius:999px;padding:9px 20px 9px 12px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.fr-pill i{width:22px;height:22px;border-radius:50%;background:rgba(171,231,99,.18);display:grid;place-items:center}
+.fr-pill i::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--lime)}
+.fr-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;margin:34px 0 36px}
+.fr-feats li{display:flex;gap:16px;align-items:flex-start}
+.fr-feats .ffi{width:56px;height:56px;border-radius:18px;background:rgba(171,231,99,.12);border:1px solid rgba(171,231,99,.18);color:var(--leaf);display:grid;place-items:center;flex:none;transition:background .3s, transform .3s}
+.fr-feats li:hover .ffi{background:var(--lime);color:var(--forest);transform:translateY(-3px)}
+.fr-feats .ffi svg{width:24px;height:24px}
+.fr-feats b{display:block;font-family:var(--display);font-size:19px;font-weight:700;color:#fff;margin-bottom:4px;line-height:1.2}
+.fr-feats span{color:#B9CDB5;font-size:15px;line-height:1.5}
+.fr-ctas{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:720px){.fr-feats{grid-template-columns:1fr;gap:20px}.fr-feats .ffi{width:48px;height:48px;border-radius:15px}.fr-ctas .btn{width:100%;justify-content:center}}
+
 /* ===== responsive ===== */
 @media (max-width:1480px){
   .hdr-cta .ghostcta{display:none}
@@ -639,6 +653,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5c-8.6-.4-14.6 3.4-16 10.2-.4 2 .1 3.9 1.3 5.3l-2.3 2.3 1.4 1.4 2.3-2.3c1.4 1.1 3.3 1.6 5.2 1.2 6.8-1.4 10.6-7.4 10.2-16a2.2 2.2 0 0 0-2.1-2.1Zm-8.4 15.1c-1.3.3-2.6 0-3.6-.6l6.2-6.2-1.4-1.4L7.1 16.6c-.7-1-.9-2.3-.6-3.6C7.6 7.6 12.3 4.6 19.5 5.5c.9 7.2-2.1 11.9-7.4 13.1Z"/></symbol>
   <symbol id="i-botanic" viewBox="0 0 100 160"><path fill="currentColor" d="M50 4C18 34 8 70 16 104c6 26 20 42 34 52 14-10 28-26 34-52C92 70 82 34 50 4Z"/><path d="M50 22v132M50 60 30 44M50 84 26 66M50 108 30 94M50 70l20-16M50 96l22-18M50 120l18-14" fill="none" stroke="#F7F4EA" stroke-width="3" stroke-linecap="round" opacity=".7"/></symbol>
   <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9L12 2.5ZM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></symbol><symbol id="i-mug" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 9h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9ZM16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1.5 1.5 1.5 3M12 3c0 1.5 1.5 1.5 1.5 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol><symbol id="i-lemon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M19.5 4.5c-.6-.6-1.8-.6-2.6-.1C15.5 3.6 13.4 3.4 11 4.3 7.2 5.8 4.5 9.6 4.4 13.5c-.6.9-.7 2.1 0 2.8.6.6 1.5.6 2.3.3.9 2.4 3.3 3.3 6 2.8 3.9-.8 7.2-4.6 7.5-8.8.3-1.6.1-3.1-.5-4.2.5-.7.4-1.8-.2-2.4Z"/><path d="M9 11c1-2 2.5-3 4.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol><symbol id="i-spray" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M8 9h6l1.5 3v8.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V12L8 9ZM9 9V6h4l3 1.5M9 6V4h4"/><path d="M18.5 5h.01M20.5 3.5h.01M20.5 6.5h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2" fill="currentColor"/><circle cx="5.5" cy="9.5" r="2.4" fill="currentColor"/><circle cx="18.5" cy="9.5" r="2.4" fill="currentColor"/><path fill="currentColor" d="M6.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5H6.5ZM1.5 18c0-2.5 1.6-4 3.8-4 .6 0 1.1.1 1.6.3A7 7 0 0 0 5 18H1.5ZM22.5 18c0-2.5-1.6-4-3.8-4-.6 0-1.1.1-1.6.3A7 7 0 0 1 19 18h3.5Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
@@ -922,9 +937,19 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   <div class="wrap">
     <div class="fr-top">
       <div>
-        <span class="eyebrow rv">Franchise opportunities</span>
-        <h2 class="h2 rv d1">Invest in your future <em>and your happiness.</em></h2>
-        <p class="lead rv d2">Own a business built on recurring revenue, a recognized eco-friendly brand and a schedule that leaves room for life. Two easy options, one limitless brand.</p>
+        <span class="fr-pill rv"><i></i>Franchise opportunities</span>
+        <h2 class="h2 rv d1">Own a <em>Maid Green</em> franchise.</h2>
+        <p class="lead rv d2">Bring eco-friendly cleaning to your community. Join a proven green cleaning brand with training, systems and support from day one.</p>
+        <ul class="fr-feats">
+          <li class="rv d1"><span class="ffi"><svg><use href="#i-leaf"/></svg></span><div><b>Green brand since 2006</b><span>An established eco-friendly name families already trust.</span></div></li>
+          <li class="rv d2"><span class="ffi"><svg><use href="#i-home"/></svg></span><div><b>Full training &amp; systems</b><span>Hiring, scheduling and cleaning processes ready to run.</span></div></li>
+          <li class="rv d3"><span class="ffi"><svg><use href="#i-users"/></svg></span><div><b>Ongoing support</b><span>Marketing help and a team behind you after launch.</span></div></li>
+          <li class="rv d4"><span class="ffi"><svg><use href="#i-pin"/></svg></span><div><b>Protected territory</b><span>Grow your business in your own local market.</span></div></li>
+        </ul>
+        <div class="fr-ctas rv d4">
+          <a class="btn btn-lime" href="#frform">Inquire About a Franchise <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost-light" href="tel:18777536243"><svg><use href="#i-phone"/></svg>Call 1.877.753.6243</a>
+        </div>
       </div>
       <div class="fr-video rv d2">
         <div class="fr-vid msgvid" data-msgvid><span class="vlabel">Why own a Maid Green</span><video preload="none" playsinline poster="assets/video/franchise-poster.jpg"><source src="assets/video/franchise-message.mp4" type="video/mp4"></video><button class="play" aria-label="Play franchise video"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></svg></button></div>
