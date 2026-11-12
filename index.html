@@ -578,6 +578,29 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:1024px){.fr-img{justify-self:start;margin-top:10px}}
 @media (max-width:720px){.fr-badge{left:10px;bottom:16px;padding:12px 16px}.fr-badge b{font-size:26px}.fr-photo2{border-radius:120px 22px 22px 22px}}
 
+/* path cards */
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;align-items:stretch}
+.pcard{position:relative;background:var(--cream);color:var(--forest);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .35s, box-shadow .35s}
+.pcard:hover{transform:translateY(-8px);box-shadow:0 30px 50px -28px rgba(0,0,0,.7)}
+.pcard .ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.pcard .pnum{font-family:var(--serif);font-style:italic;font-size:40px;line-height:1;color:var(--green);opacity:.5}
+.pcard .pviz{display:flex;gap:5px;color:var(--forest)}
+.pcard .pviz i{width:14px;height:14px;border-radius:4px;background:var(--forest)}
+.pcard .pviz i.off{opacity:.15}
+.pcard .pviz svg{width:38px;height:38px}
+.pcard .pname{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.pcard h4{font-family:var(--display);font-size:28px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.pcard .pprice{font-family:var(--serif);font-size:19px;color:#3D5745;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.pcard .pprice b{font-family:var(--display);font-style:normal;font-size:38px;font-weight:800;color:var(--forest);letter-spacing:-.02em}
+.pcard p{color:var(--muted);font-size:15.5px}
+.pcard .btn{margin-top:auto;align-self:flex-start;background:var(--forest);color:#fff;padding:13px 20px;font-size:15px}
+.pcard .btn:hover{background:var(--green)}
+.pcard.feat{background:#fff;box-shadow:0 0 0 3px var(--sun), 0 30px 50px -30px rgba(0,0,0,.7)}
+.pcard.feat .btn{background:var(--green)}
+.pcard.feat .btn:hover{background:var(--forest)}
+.pflag{position:absolute;top:-14px;left:30px;background:var(--sun);color:var(--forest);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 14px}
+@media (max-width:1024px){.pcards{grid-template-columns:1fr;gap:26px}}
+
 /* ===== responsive ===== */
 @media (max-width:1480px){
   .hdr-cta .ghostcta{display:none}
@@ -980,13 +1003,34 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       <h3 class="rv">Choose your path</h3>
       <p class="rv d1">Start fresh in a new territory or step into an established location with customers and staff already in place.</p>
     </div>
-    <div class="paths rv" id="paths">
-      <div class="path-list" role="tablist" aria-label="Franchise options">
-        <button class="path-opt on" role="tab" data-path="0"><span class="po-n">01</span><span><b>Eco-One</b><small>A single territory</small></span><span class="po-p">from $17,550</span></button>
-        <button class="path-opt" role="tab" data-path="1"><span class="po-n">02</span><span><b>Executive Green</b><small>A multi-territory area</small></span><span class="po-p">from $45,500</span></button>
-        <button class="path-opt" role="tab" data-path="2"><span class="po-n">03</span><span><b>Green Key</b><small>An existing location</small></span><span class="po-p">call us</span></button>
-      </div>
-      <div class="path-detail" id="pathdetail" aria-live="polite"></div>
+    <div class="pcards" id="paths">
+      <article class="pcard rv">
+        
+        <div class="ptop"><span class="pnum">01</span><div class="pviz" aria-hidden="true"><i></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div></div>
+        <span class="pname">Eco-One</span>
+        <h4>A single territory</h4>
+        <div class="pprice">Starting at <b>$17,550</b></div>
+        <p>Ideal for owners who want to be out in the community, not behind a desk all day. Build your business one happy home at a time.</p>
+        <a class="btn" href="#frform" data-opt="Eco-One">Ask about Eco-One <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="pcard feat rv d1">
+        <span class="pflag">Most room to grow</span>
+        <div class="ptop"><span class="pnum">02</span><div class="pviz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <span class="pname">Executive Green</span>
+        <h4>A multi-territory area</h4>
+        <div class="pprice">Starting at <b>$45,500</b></div>
+        <p>Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation and a team around them.</p>
+        <a class="btn" href="#frform" data-opt="Executive Green">Ask about Executive Green <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="pcard rv d2">
+        
+        <div class="ptop"><span class="pnum">03</span><div class="pviz" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12h9M18 12v3M21 12v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></div>
+        <span class="pname">Green Key</span>
+        <h4>An existing location</h4>
+        <div class="pprice"><b>Call</b> for details</div>
+        <p>Purchase an established Maid Green location that already has employees and customers, and start running from day one.</p>
+        <a class="btn" href="#frform" data-opt="Green Key">Ask about Green Key <svg><use href="#i-arrow"/></svg></a>
+      </article>
     </div>
 
     <div class="fr-form rv">
@@ -1263,22 +1307,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     v.addEventListener('ended',function(){box.classList.remove('playing');v.controls=false});
   });
 
-  // franchise path selector
-  var PATHS=[
-    {tag:'Eco-One',h:'A single territory',price:'Starting at <b>$17,550</b>',p:'Ideal for owners who want to be out in the community, not behind a desk all day. Build your business one happy home at a time.',viz:1,opt:'Eco-One'},
-    {tag:'Executive Green · Most room to grow',h:'A multi-territory area',price:'Starting at <b>$45,500</b>',p:'Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation and a team around them.',viz:5,opt:'Executive Green'},
-    {tag:'Green Key',h:'An existing location',price:'<b>Call</b> for details',p:'Purchase an established Maid Green location that already has employees and customers, and start running from day one.',viz:0,opt:'Green Key'}
-  ];
-  var pd=document.getElementById('pathdetail'), popts=[].slice.call(document.querySelectorAll('.path-opt'));
-  function pickPath(i){
-    var P=PATHS[i], viz='';
-    if(P.viz){for(var k=0;k<5;k++)viz+='<i'+(k<P.viz?'':' class="off"')+'></i>'}else{viz='<svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12h9M18 12v3M21 12v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'}
-    pd.innerHTML='<div class="pd-in"><span class="pd-tag">'+P.tag+'</span><div class="pd-viz" aria-hidden="true">'+viz+'</div><h4>'+P.h+'</h4><div class="pd-price">'+P.price+'</div><p>'+P.p+'</p><a class="btn" href="#frform" data-opt="'+P.opt+'">Ask about '+P.opt+' <svg><use href="#i-arrow"/></svg></a></div>';
-    popts.forEach(function(b,k){b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});
-  }
-  popts.forEach(function(b,k){b.addEventListener('click',function(){pickPath(k)})});
-  pd.addEventListener('click',function(e){var a=e.target.closest('[data-opt]');if(a){document.getElementById('ffoption').value=a.dataset.opt}});
-  pickPath(0);
+  // path cards preselect the form option
+  document.getElementById('paths').addEventListener('click',function(e){var a=e.target.closest('[data-opt]');if(a){document.getElementById('ffoption').value=a.dataset.opt}});
 
   // franchise form (front-end only)
   document.getElementById('frform').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ffok').style.display='block';this.querySelectorAll('input,select,button').forEach(function(x){x.disabled=true})});
