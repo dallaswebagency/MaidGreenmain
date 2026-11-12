@@ -583,7 +583,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;align-items:stretch}
 .pcard{position:relative;background:var(--cream);color:var(--forest);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .35s, box-shadow .35s}
 .pcard:hover{transform:translateY(-8px);box-shadow:0 30px 50px -28px rgba(0,0,0,.7)}
-.pcard .ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.pcard .ptop{display:flex;justify-content:flex-start;align-items:center;margin-bottom:6px;min-height:38px}
 .pcard .pnum{font-family:var(--serif);font-style:italic;font-size:40px;line-height:1;color:var(--green);opacity:.5}
 .pcard .pviz{display:flex;gap:5px;color:var(--forest)}
 .pcard .pviz i{width:14px;height:14px;border-radius:4px;background:var(--forest)}
@@ -1007,7 +1007,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     <div class="pcards" id="paths">
       <article class="pcard rv">
         
-        <div class="ptop"><span class="pnum">01</span><div class="pviz" aria-hidden="true"><i></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div></div>
+        <div class="ptop"><div class="pviz" aria-hidden="true"><i></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div></div>
         <span class="pname">Eco-One</span>
         <h4>A single territory</h4>
         <div class="pprice">Starting at <b>$17,550</b></div>
@@ -1016,7 +1016,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       </article>
       <article class="pcard feat rv d1">
         <span class="pflag">Most room to grow</span>
-        <div class="ptop"><span class="pnum">02</span><div class="pviz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="ptop"><div class="pviz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
         <span class="pname">Executive Green</span>
         <h4>A multi-territory area</h4>
         <div class="pprice">Starting at <b>$45,500</b></div>
@@ -1025,7 +1025,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       </article>
       <article class="pcard rv d2">
         
-        <div class="ptop"><span class="pnum">03</span><div class="pviz" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12h9M18 12v3M21 12v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></div>
+        <div class="ptop"><div class="pviz" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12h9M18 12v3M21 12v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></div>
         <span class="pname">Green Key</span>
         <h4>An existing location</h4>
         <div class="pprice"><b>Call</b> for details</div>
