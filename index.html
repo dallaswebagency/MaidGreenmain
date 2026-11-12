@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maid Green | Eco-Friendly House &amp; Commercial Cleaning Since 2006</title>
+<meta name="description" content="Maid Green is an eco-friendly professional cleaning company serving families and businesses in Florida, Michigan and Illinois since 2006. Find your local team or explore franchise opportunities.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#10291B; --forest-2:#173A26; --forest-3:#0B1F14;
+  --green:#2C7A44; --leaf:#8CC63F; --lime:#ABE763; --sun:#F2D118;
+  --cream:#F7F4EA; --cream-2:#EFEADB; --paper:#FFFDF7;
+  --ink:#10291B; --muted:#5B6B60; --line:#E2DECF;
+  --display:'Bricolage Grotesque', system-ui, sans-serif;
+  --serif:'Newsreader', Georgia, serif;
+  --body:'Outfit', system-ui, sans-serif;
+  --r-lg:28px; --r-md:20px; --r-sm:14px;
+  --shadow:0 24px 60px -28px rgba(16,41,27,.35);
+  --shadow-sm:0 10px 30px -18px rgba(16,41,27,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.h2{font-family:var(--display);font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.025em}
+.h2 em,.h1 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
+.lead{color:var(--muted);font-size:18px;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;border-radius:999px;padding:15px 26px;font-weight:600;font-size:16px;transition:transform .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;transition:transform .25s ease}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 12px 26px -12px rgba(44,122,68,.8)}
+.btn-primary:hover{background:var(--forest);transform:translateY(-2px)}
+.btn-lime{background:var(--lime);color:var(--forest)}
+.btn-lime:hover{background:#fff;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 1.5px rgba(16,41,27,.25)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--forest);transform:translateY(-2px)}
+.btn-ghost-light{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn-ghost-light:hover{box-shadow:inset 0 0 0 1.5px var(--lime);color:var(--lime)}
+.textlink{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--green);border-bottom:1.5px solid rgba(44,122,68,.3);padding-bottom:2px;transition:border-color .2s, gap .2s}
+.textlink:hover{border-color:var(--green);gap:12px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* ===== utility bar ===== */
+.util{background:var(--forest);color:#DDE8D6;font-size:14px}
+.util .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:46px}
+.util-left{display:flex;align-items:center;gap:22px}
+.util-left span{display:inline-flex;align-items:center;gap:8px}
+.util-left svg{width:15px;height:15px;color:var(--lime)}
+.util-zip{display:flex;align-items:center;gap:8px}
+.util-zip label{color:#B9CDB5}
+.util-zip form{display:flex;background:rgba(255,255,255,.08);border-radius:999px;padding:3px;border:1px solid rgba(255,255,255,.12)}
+.util-zip input{background:transparent;border:0;color:#fff;width:104px;padding:4px 12px;outline:0;font-size:14px}
+.util-zip input::placeholder{color:#9DB59A}
+.util-zip button{background:var(--lime);color:var(--forest);border:0;border-radius:999px;padding:4px 14px;font-weight:600;font-size:13px;cursor:pointer}
+.util-phone{font-weight:600;color:#fff;display:inline-flex;gap:8px;align-items:center}
+.util-phone svg{width:15px;height:15px;color:var(--sun)}
+
+/* ===== header ===== */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,253,247,.92);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:box-shadow .3s, border-color .3s}
+.hdr.scrolled{box-shadow:0 10px 30px -22px rgba(16,41,27,.5);border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:84px}
+.logo{flex:none}
+.logo img{height:62px;width:auto}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{font-weight:500;font-size:15.5px;padding:10px 12px;white-space:nowrap;border-radius:999px;color:var(--forest);position:relative;transition:background .2s}
+.nav a:hover{background:var(--cream-2)}
+.nav a.on::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:var(--leaf);transform:translateX(-50%)}
+.hdr-cta{display:flex;gap:10px}
+.hdr-cta .btn{padding:12px 20px;font-size:15px}
+.burger{display:none;margin-left:auto;width:48px;height:48px;border-radius:14px;border:0;background:var(--forest);cursor:pointer;position:relative}
+.burger span{position:absolute;left:14px;right:14px;height:2px;background:#fff;border-radius:2px;transition:transform .35s cubic-bezier(.6,0,.3,1), opacity .2s, top .35s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px;right:22px}
+.menu-open .burger span:nth-child(1){top:23px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:23px;right:14px;transform:rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:55;background:var(--forest);color:#fff;padding:150px 28px 40px;display:flex;flex-direction:column;gap:6px;clip-path:circle(0% at calc(100% - 48px) 88px);transition:clip-path .6s cubic-bezier(.7,0,.2,1);overflow-y:auto}
+.menu-open .mnav{clip-path:circle(150% at calc(100% - 48px) 88px)}
+.mnav a.ml{font-family:var(--display);font-weight:700;font-size:32px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);opacity:0;transform:translateY(14px);transition:opacity .4s, transform .4s}
+.menu-open .mnav a.ml{opacity:1;transform:none}
+.menu-open .mnav a.ml:nth-child(2){transition-delay:.05s}.menu-open .mnav a.ml:nth-child(3){transition-delay:.1s}.menu-open .mnav a.ml:nth-child(4){transition-delay:.15s}.menu-open .mnav a.ml:nth-child(5){transition-delay:.2s}.menu-open .mnav a.ml:nth-child(6){transition-delay:.25s}.menu-open .mnav a.ml:nth-child(7){transition-delay:.3s}
+.mnav .mcta{display:grid;gap:10px;margin-top:24px}
+.mnav .mcta .btn{justify-content:center}
+.menu-open .hdr{background:var(--forest);border-color:transparent}
+.menu-open .hdr .logo{position:relative;z-index:61}
+
+/* ===== hero ===== */
+.hero{position:relative;padding:64px 0 96px;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 10%, rgba(171,231,99,.28), transparent 60%),
+  radial-gradient(700px 500px at -10% 90%, rgba(242,209,24,.16), transparent 60%),
+  var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px 8px 10px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:var(--shadow-sm)}
+.badge .dot{width:26px;height:26px;border-radius:50%;background:var(--forest);display:grid;place-items:center}
+.badge .dot svg{width:14px;height:14px;color:var(--lime)}
+.h1{font-family:var(--display);font-weight:800;font-size:clamp(46px,6.4vw,88px);line-height:.95;letter-spacing:-.035em;margin:26px 0 22px}
+.h1 em{color:var(--green);display:block}
+.hero p.lead{margin-bottom:30px}
+.finder{background:#fff;border-radius:22px;padding:10px;display:flex;gap:8px;box-shadow:var(--shadow);border:1px solid var(--line);max-width:540px}
+.finder .fi{flex:1;display:flex;align-items:center;gap:10px;padding:0 14px}
+.finder .fi svg{width:22px;height:22px;color:var(--green);flex:none}
+.finder input{border:0;outline:0;width:100%;font-size:17px;padding:14px 0;background:transparent;color:var(--ink)}
+.finder input::placeholder{color:#8A988E}
+.zip-result{min-height:26px;margin-top:12px;font-size:15px;color:var(--muted);max-width:540px}
+.zip-result a{color:var(--green);font-weight:600;border-bottom:1.5px solid rgba(44,122,68,.35)}
+.zip-result b{color:var(--forest)}
+.hero-sub{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:14px}
+.states{display:flex;gap:8px}
+.states span{font-size:13px;font-weight:600;background:var(--cream-2);border-radius:999px;padding:6px 12px;color:var(--forest)}
+
+.hero-art{position:relative;height:620px}
+.ha-main{position:absolute;right:0;top:20px;width:88%;height:520px;border-radius:200px 28px 200px 28px;overflow:hidden;box-shadow:var(--shadow)}
+.ha-main img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:slowzoom 18s ease-in-out infinite alternate}
+@keyframes slowzoom{to{transform:scale(1.12)}}
+.ha-small{position:absolute;left:0;bottom:0;width:46%;height:250px;border-radius:28px 120px 28px 120px;overflow:hidden;border:8px solid var(--cream);box-shadow:var(--shadow)}
+.ha-small img{width:100%;height:100%;object-fit:cover}
+.float{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);font-size:14px;line-height:1.3;animation:bob 6s ease-in-out infinite}
+.float b{display:block;font-size:15px}
+.float small{color:var(--muted)}
+.float .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
+.float .ic svg{width:20px;height:20px}
+.f1{top:56px;left:-6px}
+.f1 .ic{background:var(--lime);color:var(--forest)}
+.f2{right:-14px;bottom:150px;animation-delay:-2s}
+.f2 .ic{background:var(--forest);color:var(--lime)}
+.seal{position:absolute;left:44%;bottom:200px;width:96px;animation:spin 22s linear infinite;filter:drop-shadow(0 10px 18px rgba(16,41,27,.3))}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.leafdeco{position:absolute;pointer-events:none;color:var(--leaf);opacity:.55}
+.ld1{width:70px;top:-20px;right:45%;transform:rotate(-35deg);animation:sway 9s ease-in-out infinite}
+.ld2{width:46px;bottom:40px;right:3%;transform:rotate(30deg);animation:sway 7s ease-in-out infinite reverse;color:var(--green);opacity:.35}
+@keyframes sway{0%,100%{rotate:0deg}50%{rotate:12deg}}
+
+/* ===== marquee ===== */
+.marquee{background:var(--forest);color:#fff;overflow:hidden;padding:22px 0;border-block:1px solid rgba(255,255,255,.06)}
+.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-item{display:flex;align-items:center;gap:14px;padding:0 30px;font-family:var(--display);font-weight:700;font-size:22px;white-space:nowrap}
+.mq-item svg{width:24px;height:24px;color:var(--lime);flex:none}
+.mq-item i{font-family:var(--serif);font-weight:400;color:var(--lime)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== about ===== */
+.about{padding:130px 0 120px;background:var(--paper)}
+.about .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.about .h2{margin:18px 0 24px}
+.about p.lead{margin-bottom:34px}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:38px}
+.promise{display:flex;gap:14px;padding:18px;border-radius:var(--r-md);background:var(--cream);border:1px solid var(--line);transition:transform .3s, background .3s}
+.promise:hover{transform:translateY(-4px);background:#fff}
+.promise .pi{width:42px;height:42px;border-radius:14px;background:var(--forest);color:var(--lime);display:grid;place-items:center;flex:none}
+.promise .pi svg{width:20px;height:20px}
+.promise h4{font-family:var(--display);font-size:17px;font-weight:700;line-height:1.2;margin-bottom:4px}
+.promise p{font-size:14.5px;color:var(--muted);line-height:1.45}
+.about-art{position:relative}
+.about-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/4.4;box-shadow:var(--shadow)}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-cap{position:absolute;left:24px;bottom:24px;right:24px;background:rgba(16,41,27,.82);backdrop-filter:blur(8px);color:#fff;border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px}
+.about-cap b{font-family:var(--display);font-size:17px;display:block}
+.about-cap span{color:#BFD3BA}
+.ring{position:absolute;top:-46px;right:-36px;width:150px;height:150px;border-radius:50%;background:var(--lime);display:grid;place-items:center;box-shadow:var(--shadow)}
+.ring svg{position:absolute;inset:0;animation:spin 26s linear infinite}
+.ring text{font-family:var(--body);font-weight:700;font-size:12.5px;letter-spacing:3.2px;fill:var(--forest);text-transform:uppercase}
+.ring .yr{font-family:var(--display);font-weight:800;font-size:32px;color:var(--forest);line-height:1}
+
+/* ===== services bento ===== */
+.services{padding:120px 0;background:var(--cream)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:54px}
+.sec-head .h2{margin-top:16px;max-width:640px}
+.sec-head .side{max-width:380px}
+.sec-head .side p{color:var(--muted);margin-bottom:16px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:250px;gap:18px}
+.svc{position:relative;border-radius:var(--r-lg);overflow:hidden;color:#fff;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;box-shadow:var(--shadow-sm)}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.svc::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(11,31,20,0) 25%, rgba(11,31,20,.88) 100%);transition:background .4s}
+.svc:hover img{transform:scale(1.08)}
+.svc:hover::before{background:linear-gradient(180deg, rgba(11,31,20,.2) 0%, rgba(11,31,20,.94) 100%)}
+.svc .tag{position:absolute;top:20px;left:20px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px}
+.svc h3{font-family:var(--display);font-weight:700;font-size:23px;line-height:1.1;letter-spacing:-.01em}
+.svc p{font-size:14.5px;color:#D7E4D3;line-height:1.45;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s ease, opacity .4s ease, margin .4s;margin-top:0}
+.svc:hover p,.svc:focus-visible p{max-height:120px;opacity:1;margin-top:8px}
+.svc .go{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;transform:rotate(-45deg) scale(.85);opacity:.9;transition:transform .4s, opacity .4s}
+.svc .go svg{width:18px;height:18px}
+.svc:hover .go{transform:rotate(0) scale(1);opacity:1}
+.svc.big{grid-column:span 2;grid-row:span 2;padding:34px}
+.svc.big h3{font-size:36px}
+.svc.big p{max-height:none;opacity:1;margin-top:10px;font-size:16px;max-width:420px}
+.svc.wide{grid-column:span 2}
+.svc.wide h3{font-size:28px}
+.svc.wide p{max-height:none;opacity:1;margin-top:8px;max-width:380px}
+.svc .more{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;color:var(--lime);margin-top:14px}
+.svc .more svg{width:16px;height:16px}
+
+/* ===== locations ===== */
+.locs{padding:130px 0;background:var(--paper);position:relative;overflow:hidden}
+.locs .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.locs-intro{position:sticky;top:120px}
+.locs-intro .h2{margin:16px 0 22px}
+.locs-intro .finder{margin-top:30px}
+.statebar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.st{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:16px;cursor:pointer;text-align:left;transition:all .25s}
+.st b{display:block;font-family:var(--display);font-size:34px;line-height:1;font-weight:800}
+.st span{font-size:14px;color:var(--muted)}
+.st:hover{border-color:var(--green)}
+.st.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.st.on span{color:#BFD3BA}
+.st.on b{color:var(--lime)}
+.allbtn{margin-top:14px;background:none;border:0;cursor:pointer;color:var(--green);font-weight:600;font-size:15px;padding:0}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.loc{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .35s, box-shadow .35s, border-color .35s, opacity .35s}
+.loc:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.loc.hide{display:none}
+.loc.match{border-color:var(--green);box-shadow:0 0 0 3px rgba(140,198,63,.35), var(--shadow)}
+.loc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.loc h3{font-family:var(--display);font-size:22px;font-weight:700;line-height:1.15}
+.loc .stt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--cream-2);color:var(--green);padding:5px 10px;border-radius:999px;white-space:nowrap}
+.loc ul{list-style:none;display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
+.loc li{display:flex;gap:10px;align-items:flex-start}
+.loc li svg{width:16px;height:16px;color:var(--green);flex:none;margin-top:3px}
+.loc li a:hover{color:var(--green)}
+.loc .lfoot{margin-top:auto;display:flex;gap:10px;padding-top:6px}
+.loc .lfoot a{font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px}
+.loc .call{background:var(--forest);color:#fff}
+.loc .call:hover{background:var(--green)}
+.loc .visit{box-shadow:inset 0 0 0 1.5px var(--line);color:var(--forest)}
+.loc .visit:hover{box-shadow:inset 0 0 0 1.5px var(--forest)}
+.loc.newarea{background:var(--forest);color:#fff;border-color:var(--forest);justify-content:space-between}
+.loc.newarea p{color:#C5D6C1;font-size:15px}
+.loc.newarea h3{color:#fff}
+
+/* ===== tips ===== */
+.tips{padding:120px 0;background:var(--cream-2);position:relative;overflow:hidden}
+.tips-head{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;margin-bottom:50px}
+.basil{width:150px;filter:drop-shadow(0 18px 24px rgba(16,41,27,.25));animation:bob 5s ease-in-out infinite}
+.bubble{background:#fff;border-radius:26px 26px 26px 6px;padding:26px 30px;box-shadow:var(--shadow-sm);max-width:760px}
+.bubble .h2{font-size:clamp(30px,3.6vw,46px);margin-top:10px}
+.tip-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.tip{background:#fff;border-radius:var(--r-md);padding:24px 22px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line);transition:transform .35s, box-shadow .35s}
+.tip:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:var(--shadow)}
+.tip .n{font-family:var(--serif);font-style:italic;font-size:46px;line-height:1;color:var(--green)}
+.tip h4{font-family:var(--display);font-size:18px;font-weight:700;line-height:1.2}
+.tip p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.tip .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tip .chips span{font-size:12px;font-weight:600;background:#EEF6E3;color:var(--green);border-radius:999px;padding:4px 10px}
+.tips-foot{margin-top:36px;display:flex;justify-content:center}
+
+/* ===== reviews ===== */
+.reviews{padding:120px 0 110px;background:var(--paper);overflow:hidden}
+.rv-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.rv-layout .h2{margin:16px 0 20px}
+.rv-badges{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 30px}
+.rv-badges span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:var(--cream);border:1px solid var(--line);padding:8px 14px;border-radius:999px}
+.rv-badges svg{width:16px;height:16px;color:var(--green)}
+.quote-stage{position:relative;background:var(--forest);border-radius:36px;padding:56px 56px 40px;color:#fff;min-height:420px;overflow:hidden}
+.quote-stage::before{content:"\201C";position:absolute;top:-40px;right:30px;font-family:var(--serif);font-size:320px;line-height:1;color:rgba(171,231,99,.12)}
+.q{position:absolute;inset:56px 56px 110px;opacity:0;transform:translateY(16px);transition:opacity .6s, transform .6s;pointer-events:none}
+.q.on{opacity:1;transform:none;pointer-events:auto}
+.q .stars{display:flex;gap:4px;color:var(--sun);margin-bottom:22px}
+.q .stars svg{width:20px;height:20px}
+.q blockquote{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);line-height:1.25;letter-spacing:-.01em}
+.q cite{display:flex;align-items:center;gap:12px;margin-top:26px;font-style:normal;font-weight:600}
+.q cite .av{width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;font-family:var(--display);font-weight:800}
+.q cite small{display:block;color:#AFC6AA;font-weight:400}
+.q-nav{position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;align-items:center}
+.dots{display:flex;gap:8px}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.25);cursor:pointer;transition:width .3s, background .3s;padding:0}
+.dots button.on{width:32px;background:var(--lime)}
+.arrows{display:flex;gap:10px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:all .25s}
+.arrows button:hover{background:var(--lime);color:var(--forest);border-color:var(--lime)}
+.arrows svg{width:18px;height:18px}
+
+/* ===== franchise ===== */
+.fr{background:var(--forest);color:#fff;padding:130px 0 120px;position:relative;overflow:hidden}
+.fr::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;right:-300px;top:-380px;background:radial-gradient(closest-side, rgba(140,198,63,.22), transparent)}
+.fr .eyebrow{color:var(--lime)}
+.fr-top{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end;position:relative}
+.fr .h2{margin:18px 0 22px}
+.fr .h2 em{color:var(--lime)}
+.fr .lead{color:#C2D4BE}
+.fr-photo{position:relative;border-radius:28px 160px 28px 28px;overflow:hidden;height:360px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.fr-photo img{width:100%;height:100%;object-fit:cover}
+.fr-photo .chip{position:absolute;left:18px;bottom:18px;background:var(--lime);color:var(--forest);font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:24px;overflow:hidden;margin:64px 0;position:relative}
+.perk{background:var(--forest);padding:28px 24px;transition:background .3s}
+.perk:hover{background:var(--forest-2)}
+.perk svg{width:28px;height:28px;color:var(--lime);margin-bottom:14px}
+.perk h4{font-family:var(--display);font-size:19px;font-weight:700;margin-bottom:6px;line-height:1.2}
+.perk p{font-size:14.5px;color:#B5C9B0;line-height:1.5}
+.plans-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px;position:relative}
+.plans-head h3{font-family:var(--display);font-size:32px;font-weight:800;letter-spacing:-.02em}
+.plans-head p{color:#B5C9B0;max-width:420px;font-size:15px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+.plan{background:var(--forest-2);border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:30px;display:flex;flex-direction:column;gap:14px;transition:transform .35s, border-color .35s}
+.plan:hover{transform:translateY(-6px);border-color:rgba(171,231,99,.5)}
+.plan .pn{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.plan h4{font-family:var(--display);font-size:28px;font-weight:800;line-height:1.1}
+.plan .price{font-family:var(--serif);font-size:20px;color:#E1EBDD}
+.plan .price b{font-family:var(--display);font-size:34px;font-weight:800;color:#fff;font-style:normal}
+.plan p{color:#B5C9B0;font-size:15px}
+.plan.feat{background:var(--lime);color:var(--forest);border-color:var(--lime)}
+.plan.feat .pn{color:var(--green)}
+.plan.feat .price,.plan.feat .price b{color:var(--forest)}
+.plan.feat p{color:#2B4A33}
+.plan .flag{align-self:flex-start;background:var(--forest);color:var(--lime);font-size:12px;font-weight:700;border-radius:999px;padding:5px 12px;letter-spacing:.06em;text-transform:uppercase}
+.fr-form{margin-top:56px;background:#fff;color:var(--ink);border-radius:30px;padding:38px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;position:relative}
+.fr-form h3{font-family:var(--display);font-size:30px;font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:10px}
+.fr-form .fine{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5}
+.fr-form .contact-line{margin-top:16px;display:grid;gap:6px;font-size:15px;font-weight:600}
+.fr-form .contact-line a{color:var(--green)}
+form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ff input,.ff select{width:100%;border:1.5px solid var(--line);background:var(--cream);border-radius:14px;padding:14px 16px;font-size:16px;color:var(--ink);outline:0;transition:border-color .2s, background .2s}
+.ff input:focus,.ff select:focus{border-color:var(--green);background:#fff}
+.ff .full{grid-column:1/-1}
+.ff .btn{justify-content:center}
+.ff-ok{display:none;grid-column:1/-1;background:#EEF6E3;color:var(--green);border-radius:14px;padding:14px 16px;font-weight:600}
+.community{display:flex;gap:16px;align-items:center;margin-top:28px;color:#C2D4BE;font-size:15px;position:relative}
+.community svg{width:26px;height:26px;color:#F4A6C1;flex:none}
+
+/* ===== final cta ===== */
+.final{padding:100px 0;background:var(--cream)}
+.final-card{position:relative;border-radius:40px;overflow:hidden;background:linear-gradient(120deg, var(--lime) 0%, #D8EE8A 45%, var(--sun) 120%);display:grid;grid-template-columns:1.1fr .9fr;min-height:420px}
+.final-copy{padding:64px;display:flex;flex-direction:column;justify-content:center}
+.final-copy .h2{color:var(--forest)}
+.final-copy p{color:#2B4A33;font-size:18px;margin:18px 0 30px;max-width:460px}
+.final-actions{display:flex;flex-wrap:wrap;gap:12px}
+.final-actions .btn-primary{background:var(--forest)}
+.final-actions .btn-primary:hover{background:var(--green)}
+.final-img{position:relative}
+.final-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:180px 0 0 0}
+
+/* ===== footer ===== */
+.ft{background:var(--forest-3);color:#B8CBB3;padding:90px 0 34px;font-size:15px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:40px}
+.ft h5{color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-weight:600}
+.ft ul{list-style:none;display:grid;gap:10px}
+.ft a:hover{color:var(--lime)}
+.ft-brand img{height:74px;margin-bottom:18px}
+.ft-brand p{max-width:300px;margin-bottom:22px}
+.social{display:flex;gap:10px}
+.social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;transition:all .25s}
+.social a:hover{background:var(--lime);color:var(--forest);border-color:var(--lime)}
+.social svg{width:18px;height:18px}
+.ft-contact b{color:#fff;font-family:var(--display);font-size:22px;display:block}
+.ft-contact li span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7E9879}
+.ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:60px;padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:#7E9879}
+.ft-bot a{color:#B8CBB3;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== responsive ===== */
+@media (max-width:1480px){
+  .hdr-cta .ghostcta{display:none}
+}
+@media (max-width:1180px){
+  .nav a{padding:10px 8px;font-size:14.5px}
+  .hdr .wrap{gap:18px}
+}
+@media (max-width:1024px){
+  .nav,.hdr-cta{display:none}
+  .burger{display:block}
+  .util-left .hide-md{display:none}
+  .hero .wrap,.about .wrap,.locs .wrap,.rv-layout,.fr-top,.fr-form{grid-template-columns:1fr}
+  .hero-art{height:540px;max-width:640px;width:100%;margin-inline:auto}
+  .locs-intro{position:static}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tip-row{grid-template-columns:repeat(2,1fr)}
+  .tip-row .tip:last-child{grid-column:1/-1}
+  .perks{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr}
+  .final-card{grid-template-columns:1fr}
+  .final-img{height:320px}
+  .final-img img{border-radius:120px 0 0 0}
+  .ft-grid{grid-template-columns:1fr 1fr 1fr}
+  .ft-brand{grid-column:1/-1}
+  .about-art{max-width:560px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 32px)}
+  .util .wrap{justify-content:center}
+  .util-left,.util-zip label{display:none}
+  .hdr .wrap{height:72px}
+  .logo img{height:50px}
+  .mnav{padding-top:120px}
+  .hero{padding:40px 0 70px}
+  .finder{flex-direction:column;padding:8px}
+  .finder .btn{justify-content:center}
+  .hero-art{height:420px}
+  .ha-main{height:330px;width:92%;border-radius:120px 22px 120px 22px}
+  .ha-small{height:170px;width:52%;border-width:6px}
+  .seal{width:72px;bottom:150px;left:52%}
+  .f1{top:8px;left:0}
+  .f2{right:0;bottom:178px}
+  .float{padding:10px 12px;font-size:13px}
+  .float b{font-size:14px}
+  .float .ic{width:32px;height:32px}
+  .about,.services,.locs,.tips,.reviews,.fr{padding:84px 0}
+  .promises{grid-template-columns:1fr}
+  .ring{width:112px;height:112px;top:-30px;right:10px}
+  .ring text{font-size:10px;letter-spacing:2.4px}
+  .ring .yr{font-size:24px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:20px}
+  .bento{grid-template-columns:1fr;grid-auto-rows:220px}
+  .svc.big,.svc.wide{grid-column:auto;grid-row:auto}
+  .svc.big{grid-row:span 2}
+  .svc.big h3{font-size:30px}
+  .svc p{max-height:none;opacity:1;margin-top:6px}
+  .loc-grid{grid-template-columns:1fr}
+  .statebar{gap:8px}
+  .st{padding:12px}
+  .st b{font-size:28px}
+  .tips-head{grid-template-columns:1fr;justify-items:start}
+  .basil{width:110px}
+  .tip-row{grid-template-columns:1fr}
+  .quote-stage{padding:36px 26px 30px;min-height:470px;border-radius:28px}
+  .q{inset:36px 26px 100px}
+  .q-nav{left:26px;right:26px;bottom:28px}
+  .perks{grid-template-columns:1fr}
+  .plans-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .fr-photo{height:260px;border-radius:24px 110px 24px 24px}
+  .fr-form{padding:26px;border-radius:24px}
+  form.ff{grid-template-columns:1fr}
+  .final{padding:64px 0}
+  .final-copy{padding:40px 26px}
+  .final-card{border-radius:30px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-contact{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5c-8.6-.4-14.6 3.4-16 10.2-.4 2 .1 3.9 1.3 5.3l-2.3 2.3 1.4 1.4 2.3-2.3c1.4 1.1 3.3 1.6 5.2 1.2 6.8-1.4 10.6-7.4 10.2-16a2.2 2.2 0 0 0-2.1-2.1Zm-8.4 15.1c-1.3.3-2.6 0-3.6-.6l6.2-6.2-1.4-1.4L7.1 16.6c-.7-1-.9-2.3-.6-3.6C7.6 7.6 12.3 4.6 19.5 5.5c.9 7.2-2.1 11.9-7.4 13.1Z"/></symbol>
+  <symbol id="i-botanic" viewBox="0 0 100 160"><path fill="currentColor" d="M50 4C18 34 8 70 16 104c6 26 20 42 34 52 14-10 28-26 34-52C92 70 82 34 50 4Z"/><path d="M50 22v132M50 60 30 44M50 84 26 66M50 108 30 94M50 70l20-16M50 96l22-18M50 120l18-14" fill="none" stroke="#F7F4EA" stroke-width="3" stroke-linecap="round" opacity=".7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 21V5l9-2v18M13 9h7v12M8 8h1M8 12h1M8 16h1M16 13h1M16 17h1M2 21h20"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5s-8-4.6-8-10.7A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8c0 6.1-8 10.7-8 10.7Z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 1 1-2.3-5.7L20 7.5M20 3v4.5h-4.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 2l3 3-3 3M4 11V9a4 4 0 0 1 4-4h12M7 22l-3-3 3-3M20 13v2a4 4 0 0 1-4 4H4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9ZM3 7.5l9 4.5 9-4.5M12 12v9"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8.5 14-1.5 7 5-2.5 5 2.5-1.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M9 4 3 6.5v13.5L9 17.5l6 2.5 6-2.5V4l-6 2.5L9 4ZM9 4v13.5M15 6.5V20"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8.5V7c0-.8.5-1 1-1h2V2.5h-2.8C11 2.5 10.3 4.8 10.3 6.6v1.9H8v3.6h2.3V21.5H14V12.1h2.7l.4-3.6H14Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></symbol>
+</svg>
+
+<!-- ===== Utility bar ===== -->
+<div class="util">
+  <div class="wrap">
+    <div class="util-left">
+      <span><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning since 2006</span>
+      <span class="hide-md"><svg><use href="#i-pin"/></svg>Florida · Michigan · Illinois</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:22px">
+      <div class="util-zip">
+        <label for="uzip">Find your local team</label>
+        <form data-zip-form data-target="#hero-result" aria-label="Find your local Maid Green by ZIP code">
+          <input id="uzip" name="zip" inputmode="numeric" maxlength="5" placeholder="ZIP code" aria-label="ZIP code">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+      <a class="util-phone" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="https://www.maidgreen.com/" aria-label="Maid Green home"><img src="assets/logo.png" alt="Maid Green, made clean since 2006"></a>
+    <nav class="nav" aria-label="Main">
+      <a class="on" href="https://www.maidgreen.com/">Home</a>
+      <a href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a>
+      <a href="https://www.maidgreen.com/services/">Cleaning Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#franchise">Franchise Opportunities</a>
+      <a href="https://www.maidgreen.com/category/blog/">Resources</a>
+      <a href="https://www.maidgreen.com/contact/">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-ghost ghostcta" href="#franchise">Franchise With Us</a>
+      <a class="btn btn-primary" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <a class="ml" href="https://www.maidgreen.com/">Home</a>
+  <a class="ml" href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a>
+  <a class="ml" href="https://www.maidgreen.com/services/">Cleaning Services</a>
+  <a class="ml" href="#locations">Locations</a>
+  <a class="ml" href="#franchise">Franchise Opportunities</a>
+  <a class="ml" href="https://www.maidgreen.com/category/blog/">Resources</a>
+  <a class="ml" href="https://www.maidgreen.com/contact/">Contact</a>
+  <div class="mcta">
+    <a class="btn btn-lime" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-ghost-light" href="#franchise">Franchise With Us</a>
+    <a class="btn btn-ghost-light" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
+  </div>
+</div>
+
+<main>
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <svg class="leafdeco ld1" viewBox="0 0 100 160" aria-hidden="true"><use href="#i-botanic"/></svg>
+  <svg class="leafdeco ld2" viewBox="0 0 100 160" aria-hidden="true"><use href="#i-botanic"/></svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="badge rv"><span class="dot"><svg><use href="#i-leaf"/></svg></span>Serving families since 2006</span>
+      <h1 class="h1 rv d1">A cleaner home. <em>A greener tomorrow.</em></h1>
+      <p class="lead rv d2">Professional, eco-friendly cleaning services you can trust. Discover the Maid Green difference and find a local team ready to make your space shine.</p>
+      <form class="finder rv d3" data-zip-form data-target="#hero-result" aria-label="Find your local Maid Green by ZIP code">
+        <label class="fi"><svg><use href="#i-pin"/></svg><input name="zip" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code"></label>
+        <button class="btn btn-primary" type="submit">Find Your Local Maid Green <svg><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="zip-result rv d3" id="hero-result" aria-live="polite"></div>
+      <div class="hero-sub rv d4">
+        <a class="textlink" href="#services">Explore our services <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        <div class="states"><span>Florida</span><span>Michigan</span><span>Illinois</span></div>
+      </div>
+    </div>
+    <div class="hero-art rv d2" aria-hidden="true">
+      <div class="ha-main"><img src="assets/living-room-team.jpg" alt=""></div>
+      <div class="ha-small"><img src="assets/01-window-cleaning.jpg" alt=""></div>
+      <img class="seal" src="assets/seal.png" alt="">
+      <div class="float f1"><span class="ic"><svg><use href="#i-badge"/></svg></span><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></div>
+      <div class="float f2"><span class="ic"><svg><use href="#i-shield"/></svg></span><span><b>Licensed, insured</b><small>&amp; bonded teams</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust marquee ===== -->
+<div class="marquee" aria-label="Maid Green highlights">
+  <div class="mq-track">
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Established in <i>2006</i></div>
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning approach</div>
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg><i>6</i> local locations in FL, MI &amp; IL</div>
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Residential &amp; commercial cleaning</div>
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Free re-clean if you're not happy</div>
+    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Licensed, insured &amp; bonded</div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Established in <i>2006</i></div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning approach</div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg><i>6</i> local locations in FL, MI &amp; IL</div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Residential &amp; commercial cleaning</div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Free re-clean if you're not happy</div>
+    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Licensed, insured &amp; bonded</div>
+  </div>
+</div>
+
+<!-- ===== About ===== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">About Maid Green</span>
+      <h2 class="h2 rv d1">More than cleaning. <em>A better way to care for your space.</em></h2>
+      <p class="lead rv d2">Since 2006, Maid Green has delivered high quality cleaning at fair rates for homes and businesses, using green products that help create a healthier environment for the people inside. Every clean is shaped around your requests, carried out with care, and backed by a team that stands behind its work.</p>
+      <div class="promises">
+        <div class="promise rv d1"><span class="pi"><svg><use href="#i-sliders"/></svg></span><div><h4>Built around you</h4><p>Every clean is customized to your requests and your space.</p></div></div>
+        <div class="promise rv d2"><span class="pi"><svg><use href="#i-eye"/></svg></span><div><h4>Attention to detail</h4><p>The small things are what make a clean feel finished.</p></div></div>
+        <div class="promise rv d3"><span class="pi"><svg><use href="#i-redo"/></svg></span><div><h4>Free re-clean</h4><p>Not happy with an area? We come back and fix it at no charge.</p></div></div>
+        <div class="promise rv d4"><span class="pi"><svg><use href="#i-calendar"/></svg></span><div><h4>Flexible cancellation</h4><p>Plans change. Cancel before work starts and you're refunded.</p></div></div>
+      </div>
+      <a class="btn btn-primary rv" href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">Discover Our Story <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="about-art rv d2">
+      <div class="about-photo"><img src="assets/team-fleet.jpg" alt="The Maid Green Fox Valley team standing in front of their branded cars" loading="lazy"></div>
+      <div class="about-cap"><div><b>Real local teams</b><span>Maid Green Fox Valley, North Aurora, IL</span></div><svg width="34" height="34" style="color:var(--lime)"><use href="#i-leaf"/></svg></div>
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#circ">Made clean since · Made clean since ·</textPath></text></svg>
+        <span class="yr">2006</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Cleaning services</span><h2 class="h2 rv d1">Green cleaning for <em>every kind of space.</em></h2></div>
+      <div class="side rv d2"><p>From weekly house cleaning to office janitorial and vacation rental turnovers, every Maid Green service uses the same eco-friendly approach.</p><a class="textlink" href="https://www.maidgreen.com/services/">View all services <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="bento">
+      <a class="svc big rv" href="https://www.maidgreen.com/services/residential-cleaning/">
+        <img src="assets/house-clean.jpg" alt="Maid Green cleaners vacuuming and dusting a living room" loading="lazy">
+        <span class="tag">Most popular</span>
+        <h3>Residential Cleaning</h3>
+        <p>Customized house cleaning with green products, built around your home, your schedule and the details you care about.</p>
+        <span class="more">Learn more <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc wide rv d1" href="https://www.maidgreen.com/services/commercial-cleaning/">
+        <img src="assets/office-clean.jpg" alt="Maid Green team cleaning an office" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Commercial Cleaning</h3>
+        <p>Offices, banks, gyms, yoga studios, daycares, nursing homes and retail stores.</p>
+      </a>
+      <a class="svc rv d2" href="https://www.maidgreen.com/deep-cleaning-house-service-miami-why-maid-green-is-your-best-choice-2/">
+        <img src="assets/06-bathtub-polishing.jpg" alt="Cleaner polishing a bathtub" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Deep Cleaning</h3>
+        <p>A top-to-bottom reset for the spots regular cleans don't reach.</p>
+      </a>
+      <a class="svc rv d3" href="https://www.maidgreen.com/services/recurring-cleaning-miami/">
+        <img src="assets/living-room-clean.jpg" alt="Two cleaners tidying a bright living room" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Recurring House Cleaning</h3>
+        <p>Weekly, bi-weekly or monthly visits that keep your home consistently fresh.</p>
+      </a>
+      <a class="svc rv" href="https://www.maidgreen.com/services/move-in-move-out-cleaning-miami/">
+        <img src="assets/move-clean.jpg" alt="Cleaners preparing a home during a move" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Move-In &amp; Move-Out</h3>
+        <p>Empty-home cleaning that gets you ready for keys, inspections and new beginnings.</p>
+      </a>
+      <a class="svc rv d1" href="https://www.maidgreen.com/services/window-cleaning-miami/">
+        <img src="assets/07-blind-cleaning.jpg" alt="Cleaner vacuuming window blinds" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Window Cleaning</h3>
+        <p>Streak-free glass, sills and blinds that let the light back in.</p>
+      </a>
+      <a class="svc rv d2" href="https://www.maidgreen.com/services/vacation-rental-cleaning-miami/">
+        <img src="assets/postcon-clean.jpg" alt="Team turning over a bright vacation rental" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Vacation Rental Turnover</h3>
+        <p>Fast, reliable turnovers between guests so your rental is always ready.</p>
+      </a>
+      <a class="svc rv d3" href="https://www.maidgreen.com/services/same-day-cleaning-miami/">
+        <img src="assets/sameday-clean.jpg" alt="Maid Green team cleaning a living room the same day" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Same-Day Cleaning</h3>
+        <p>Guests on the way? Ask about same-day availability near you.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Locations ===== -->
+<section class="locs" id="locations">
+  <div class="wrap">
+    <div class="locs-intro">
+      <span class="eyebrow rv">Locations</span>
+      <h2 class="h2 rv d1">Find your <em>local Maid Green.</em></h2>
+      <p class="lead rv d2">Each Maid Green location is a locally owned team that knows its neighborhoods. Enter your ZIP code or pick a state to find yours.</p>
+      <form class="finder rv d3" data-zip-form data-target="#loc-result" aria-label="Find your local Maid Green by ZIP code">
+        <label class="fi"><svg><use href="#i-pin"/></svg><input name="zip" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code"></label>
+        <button class="btn btn-primary" type="submit">Search <svg><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="zip-result" id="loc-result" aria-live="polite"></div>
+      <div class="statebar rv d4" role="tablist" aria-label="Filter by state">
+        <button class="st" data-state="FL" role="tab"><b>1</b><span>Florida</span></button>
+        <button class="st" data-state="MI" role="tab"><b>3</b><span>Michigan</span></button>
+        <button class="st" data-state="IL" role="tab"><b>2</b><span>Illinois</span></button>
+      </div>
+      <button class="allbtn" id="allbtn" hidden>Show all locations</button>
+    </div>
+
+    <div class="loc-grid" id="locgrid">
+      <article class="loc rv" data-state="FL" data-id="miami">
+        <div class="loc-top"><h3>Maid Green Miami</h3><span class="stt">Florida</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>1666 NE 79th St, CSY #202, North Bay Village, FL 33141</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:3057570575">305-757-0575</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:maidgreen@gmail.com">maidgreen@gmail.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:3057570575">Call</a><a class="visit" href="https://www.maidgreen.com/location-miami/">Visit location</a></div>
+      </article>
+      <article class="loc rv d1" data-state="MI" data-id="bloomfield">
+        <div class="loc-top"><h3>Maid Green Bloomfield</h3><span class="stt">Michigan</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>2804 Orchard Lake Rd #206, Keego Harbor, MI 48320</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:8106886243">810-688-6243</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:Bloomfield@maidgreen.com">Bloomfield@maidgreen.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:8106886243">Call</a><a class="visit" href="https://www.maidgreen.com/location-bloomfield/">Visit location</a></div>
+      </article>
+      <article class="loc rv" data-state="MI" data-id="novi">
+        <div class="loc-top"><h3>Maid Green Novi</h3><span class="stt">Michigan</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>305 N Pontiac Trail, Walled Lake, MI 48390</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:3133896243">313-389-6243</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:Novi@maidgreen.com">Novi@maidgreen.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:3133896243">Call</a><a class="visit" href="https://www.maidgreen.com/location-novi/">Visit location</a></div>
+      </article>
+      <article class="loc rv d1" data-state="MI" data-id="livonia">
+        <div class="loc-top"><h3>Maid Green Livonia</h3><span class="stt">Michigan</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>11800 Merriman Rd #51512, Livonia, MI 48151</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:7346486243">734-648-6243</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:Livonia@maidgreen.com">Livonia@maidgreen.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:7346486243">Call</a><a class="visit" href="https://www.maidgreen.com/location-livonia/">Visit location</a></div>
+      </article>
+      <article class="loc rv" data-state="IL" data-id="glenview">
+        <div class="loc-top"><h3>Maid Green Glenview</h3><span class="stt">Illinois</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>1245 Milwaukee Ave, Ste #203, Glenview, IL 60025</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:8722286243">872-228-6243</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:Glenview@maidgreen.com">Glenview@maidgreen.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:8722286243">Call</a><a class="visit" href="https://www.maidgreen.com/location-glenview/">Visit location</a></div>
+      </article>
+      <article class="loc rv d1" data-state="IL" data-id="foxvalley">
+        <div class="loc-top"><h3>Maid Green Fox Valley</h3><span class="stt">Illinois</span></div>
+        <ul>
+          <li><svg><use href="#i-pin"/></svg>143 S Lincolnway St, Unit B, North Aurora, IL 60542</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:6303911028">630-391-1028</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:Foxvalley@maidgreen.com">Foxvalley@maidgreen.com</a></li>
+        </ul>
+        <div class="lfoot"><a class="call" href="tel:6303911028">Call</a><a class="visit" href="https://maidgreenfoxvalley.com/">Visit location</a></div>
+      </article>
+      <article class="loc newarea rv" style="grid-column:1/-1">
+        <div><h3>Don't see your area yet?</h3><p style="margin-top:8px">Maid Green is growing. Bring eco-friendly cleaning to your community as a franchise owner.</p></div>
+        <div class="lfoot"><a class="btn btn-lime" href="#franchise">Explore Franchising <svg><use href="#i-arrow"/></svg></a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews ===== -->
+<section class="reviews" id="reviews">
+  <div class="wrap rv-layout">
+    <div>
+      <span class="eyebrow rv">Customer reviews</span>
+      <h2 class="h2 rv d1">Clean homes, <em>happy customers.</em></h2>
+      <p class="lead rv d2">Families and businesses keep coming back to Maid Green for friendly teams, careful work and a clean they can trust.</p>
+      <div class="rv-badges rv d3">
+        <span><svg><use href="#i-star"/></svg>Thousands of 5-star reviews</span>
+        <span><svg><use href="#i-shield"/></svg>Licensed, insured &amp; bonded</span>
+      </div>
+      <a class="textlink rv d4" href="https://www.maidgreen.com/testimonials/">Read more testimonials <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="quote-stage rv d2" id="qstage">
+      <figure class="q on"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>Maid Green was excellent from start to finish.</blockquote><cite><span class="av">H</span><span>Hope M.<small>Maid Green customer</small></span></cite></figure>
+      <figure class="q"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>The girls from Maid Green, Darlene and Ann, are top notch professionals!</blockquote><cite><span class="av">J</span><span>James<small>Maid Green customer</small></span></cite></figure>
+      <figure class="q"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>Cleaning technicians are prompt, friendly, efficient, and easy to communicate with.</blockquote><cite><span class="av">R</span><span>Robert P.<small>Maid Green customer</small></span></cite></figure>
+      <figure class="q"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>Could not ask for better service.</blockquote><cite><span class="av">R</span><span>Ron<small>Maid Green customer</small></span></cite></figure>
+      <figure class="q"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>AMAZING! All around AMAZING job!</blockquote><cite><span class="av">D</span><span>Dave<small>Maid Green customer</small></span></cite></figure>
+      <div class="q-nav">
+        <div class="dots" id="qdots"></div>
+        <div class="arrows"><button id="qprev" aria-label="Previous review"><svg><use href="#i-left"/></svg></button><button id="qnext" aria-label="Next review"><svg><use href="#i-arrow"/></svg></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Franchise ===== -->
+<section class="fr" id="franchise">
+  <div class="wrap">
+    <div class="fr-top">
+      <div>
+        <span class="eyebrow rv">Franchise opportunities</span>
+        <h2 class="h2 rv d1">Invest in your future <em>and your happiness.</em></h2>
+        <p class="lead rv d2">Own a business built on recurring revenue, a recognized eco-friendly brand and a schedule that leaves room for life. Two easy options, one limitless brand.</p>
+      </div>
+      <div class="fr-photo rv d2"><img src="assets/05-branded-fleet.jpg" alt="Maid Green branded cars parked outside a home" loading="lazy"><span class="chip">Your territory. Our brand.</span></div>
+    </div>
+
+    <div class="perks">
+      <div class="perk rv"><svg><use href="#i-chart"/></svg><h4>Decreasing royalty scale</h4><p>The more you make, the less you pay in royalties.</p></div>
+      <div class="perk rv d1"><svg><use href="#i-repeat"/></svg><h4>80%+ repeat customers</h4><p>Most cleans come from repeat clients, for steadier income.</p></div>
+      <div class="perk rv d2"><svg><use href="#i-sun"/></svg><h4>A balanced schedule</h4><p>A flexible workweek without late hours or weekends.</p></div>
+      <div class="perk rv d3"><svg><use href="#i-box"/></svg><h4>Simple to run</h4><p>No inventory, minimal equipment and a recognized brand.</p></div>
+    </div>
+
+    <div class="plans-head">
+      <h3 class="rv">Choose your path</h3>
+      <p class="rv d1">Start fresh in a new territory or step into an established location with customers and staff already in place.</p>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <span class="pn">Eco-One</span>
+        <h4>A single territory</h4>
+        <div class="price">Starting at <b>$17,550</b></div>
+        <p>Ideal for owners who want to be out in the community, not behind a desk all day.</p>
+      </div>
+      <div class="plan feat rv d1">
+        <span class="flag">Most room to grow</span>
+        <span class="pn">Executive Green</span>
+        <h4>A multi-territory area</h4>
+        <div class="price">Starting at <b>$45,500</b></div>
+        <p>Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation.</p>
+      </div>
+      <div class="plan rv d2">
+        <span class="pn">Green Key</span>
+        <h4>An existing location</h4>
+        <div class="price"><b>Call</b> for details</div>
+        <p>Purchase an established Maid Green location that already has employees and customers.</p>
+      </div>
+    </div>
+
+    <div class="fr-form rv">
+      <div>
+        <h3>Start the conversation.</h3>
+        <p style="color:var(--muted)">Tell us a little about you and where you'd like to open. Our franchise team will be in touch.</p>
+        <div class="contact-line"><a href="mailto:franchise@maidgreen.com">franchise@maidgreen.com</a><a href="tel:18777536243">(877) 753-6243</a></div>
+        <p class="fine">This information is not an offer to sell a franchise. Offers are made only by Franchise Disclosure Document. Maid Green is currently registered to offer franchises in Illinois and Michigan.</p>
+      </div>
+      <form class="ff" id="frform">
+        <input name="name" placeholder="Full name" required aria-label="Full name">
+        <input name="phone" type="tel" placeholder="Phone number" required aria-label="Phone number">
+        <input class="full" name="email" type="email" placeholder="Email address" required aria-label="Email address">
+        <input name="area" placeholder="City or area of interest" aria-label="City or area of interest">
+        <select name="option" aria-label="Franchise option">
+          <option value="">Option of interest</option>
+          <option>Eco-One</option>
+          <option>Executive Green</option>
+          <option>Green Key</option>
+          <option>Not sure yet</option>
+        </select>
+        <button class="btn btn-primary full" type="submit">Request Franchise Info <svg><use href="#i-arrow"/></svg></button>
+        <div class="ff-ok" id="ffok">Thank you! Our franchise team will reach out soon.</div>
+      </form>
+    </div>
+
+    <div class="community rv"><svg><use href="#i-heart"/></svg><span>Giving back since 2010: Maid Green partners with Cleaning for a Reason to provide free cleanings for women going through cancer treatment.</span></div>
+  </div>
+</section>
+
+<!-- ===== Green tips (resources) ===== -->
+<section class="tips" id="resources">
+  <div class="wrap">
+    <div class="tips-head">
+      <img class="basil rv" src="assets/basil.png" alt="Basil, the Maid Green mascot">
+      <div class="bubble rv d1">
+        <span class="eyebrow">Resources</span>
+        <h2 class="h2">Green cleaning tips <em>from our pros.</em></h2>
+      </div>
+    </div>
+    <div class="tip-row">
+      <div class="tip rv"><span class="n">01</span><h4>Disinfect the bathroom</h4><p>Mix 3% hydrogen peroxide and water 50/50 for bathrooms. Follow peroxide with vinegar to freshen cutting boards.</p><div class="chips"><span>Hydrogen peroxide</span><span>Vinegar</span></div></div>
+      <div class="tip rv d1"><span class="n">02</span><h4>Lift calcium buildup</h4><p>A magic eraser and plain water removes buildup and stains from showers, tiles, walls and even shoes.</p><div class="chips"><span>Magic eraser</span><span>Water</span></div></div>
+      <div class="tip rv d2"><span class="n">03</span><h4>Refresh your mugs</h4><p>Soak mugs and coffee makers in a baking soda solution to remove stains and that bitter taste.</p><div class="chips"><span>Baking soda</span></div></div>
+      <div class="tip rv d3"><span class="n">04</span><h4>Remove sticky residue</h4><p>Lemon oil lifts sticker and gum residue. A few drops in the washer keeps forgotten laundry from smelling.</p><div class="chips"><span>Lemon essential oil</span></div></div>
+      <div class="tip rv d4"><span class="n">05</span><h4>All-purpose spray</h4><p>Vinegar, water and baking soda in a spray bottle handles sinks, toilets and showers.</p><div class="chips"><span>White vinegar</span><span>Baking soda</span></div></div>
+    </div>
+    <div class="tips-foot rv"><a class="btn btn-ghost" href="https://www.maidgreen.com/category/blog/">Visit the Maid Green blog <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-card rv">
+      <div class="final-copy">
+        <h2 class="h2">Ready for a <em>greener clean?</em></h2>
+        <p>Find the Maid Green team near you and get a free quote, or call us and we'll connect you with your local office.</p>
+        <div class="final-actions">
+          <a class="btn btn-primary" href="#locations">Find Your Local Maid Green <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
+        </div>
+      </div>
+      <div class="final-img"><img src="assets/03-detail-cleaning.jpg" alt="Maid Green cleaner wiping down a bathroom" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="assets/logo.png" alt="Maid Green">
+        <p>An environmentally friendly professional cleaning company, keeping homes and businesses clean and green since 2006.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/maidgreeninc/" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/maidgreeninc/" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://twitter.com/maidgreeninc" aria-label="X (Twitter)"><svg><use href="#i-x"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://www.maidgreen.com/services/residential-cleaning/">Residential Cleaning</a></li>
+          <li><a href="https://www.maidgreen.com/services/commercial-cleaning/">Commercial Cleaning</a></li>
+          <li><a href="https://www.maidgreen.com/deep-cleaning-house-service-miami-why-maid-green-is-your-best-choice-2/">Deep Cleaning</a></li>
+          <li><a href="https://www.maidgreen.com/services/recurring-cleaning-miami/">Recurring Cleaning</a></li>
+          <li><a href="https://www.maidgreen.com/services/move-in-move-out-cleaning-miami/">Move-In &amp; Move-Out</a></li>
+          <li><a href="https://www.maidgreen.com/services/vacation-rental-cleaning-miami/">Vacation Rentals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a></li>
+          <li><a href="#franchise">Franchise</a></li>
+          <li><a href="https://www.maidgreen.com/testimonials/">Testimonials</a></li>
+          <li><a href="https://www.maidgreen.com/press/">Press</a></li>
+          <li><a href="https://www.maidgreen.com/faq/">FAQ</a></li>
+          <li><a href="https://www.maidgreen.com/maid-green-employment/">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Locations</h5>
+        <ul>
+          <li><a href="https://www.maidgreen.com/location-miami/">Miami, FL</a></li>
+          <li><a href="https://www.maidgreen.com/location-bloomfield/">Bloomfield, MI</a></li>
+          <li><a href="https://www.maidgreen.com/location-novi/">Novi, MI</a></li>
+          <li><a href="https://www.maidgreen.com/location-livonia/">Livonia, MI</a></li>
+          <li><a href="https://www.maidgreen.com/location-glenview/">Glenview, IL</a></li>
+          <li><a href="https://maidgreenfoxvalley.com/">Fox Valley, IL</a></li>
+        </ul>
+      </div>
+      <div class="ft-contact">
+        <h5>Contact</h5>
+        <ul>
+          <li><span>Toll-free</span><a href="tel:18777536243"><b>1.877.753.6243</b></a></li>
+          <li><span>Franchise inquiries</span><a href="mailto:franchise@maidgreen.com">franchise@maidgreen.com</a></li>
+          <li><span>Office hours</span>Mon to Fri: 8 AM to 5 PM<br>Sat: email support · Sun: closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>Copyright © <span id="yr">2026</span> Maid Green, Inc. All rights reserved.</span>
+      <span><a href="https://www.maidgreen.com/terms-of-service/">Terms of Service</a> · Designed and developed by <a href="https://dallaswebagency.us/">Dallas Web Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // sticky header shadow
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>10)},{passive:true});
+
+  // mobile menu
+  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
+  function setMenu(open){document.body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open);mnav.setAttribute('aria-hidden',!open);document.body.style.overflow=open?'hidden':''}
+  burger.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // locations + ZIP lookup
+  var LOC={
+    miami:{name:'Maid Green Miami',phone:'305-757-0575',url:'https://www.maidgreen.com/location-miami/'},
+    bloomfield:{name:'Maid Green Bloomfield',phone:'810-688-6243',url:'https://www.maidgreen.com/location-bloomfield/'},
+    novi:{name:'Maid Green Novi',phone:'313-389-6243',url:'https://www.maidgreen.com/location-novi/'},
+    livonia:{name:'Maid Green Livonia',phone:'734-648-6243',url:'https://www.maidgreen.com/location-livonia/'},
+    glenview:{name:'Maid Green Glenview',phone:'872-228-6243',url:'https://www.maidgreen.com/location-glenview/'},
+    foxvalley:{name:'Maid Green Fox Valley',phone:'630-391-1028',url:'https://maidgreenfoxvalley.com/'}
+  };
+  function match(zip){
+    var p3=+zip.slice(0,3), p4=+zip.slice(0,4);
+    if(p3>=330 && p3<=333) return 'miami';
+    if(p3===481 || p3===482) return 'livonia';
+    if(p3===483) return (p4>=4837) ? 'novi' : 'bloomfield';
+    if(p3===601 || p3===604 || p3===605) return 'foxvalley';
+    if(p3===600 || p3===602 || p3===606) return 'glenview';
+    return null;
+  }
+  var cards=[].slice.call(document.querySelectorAll('#locgrid .loc[data-id]'));
+  var stBtns=[].slice.call(document.querySelectorAll('.st'));
+  var allBtn=document.getElementById('allbtn');
+  function filterState(st){
+    stBtns.forEach(function(b){b.classList.toggle('on',b.dataset.state===st)});
+    cards.forEach(function(c){c.classList.toggle('hide',!!st && c.dataset.state!==st);c.classList.remove('match')});
+    allBtn.hidden=!st;
+  }
+  stBtns.forEach(function(b){b.addEventListener('click',function(){filterState(b.classList.contains('on')?null:b.dataset.state)})});
+  allBtn.addEventListener('click',function(){filterState(null)});
+
+  document.querySelectorAll('[data-zip-form]').forEach(function(f){
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var zip=(f.querySelector('input').value||'').replace(/\D/g,'');
+      var out=document.querySelector(f.dataset.target);
+      if(zip.length!==5){out.innerHTML='Please enter a 5-digit ZIP code.';return}
+      var id=match(zip);
+      if(id){
+        var L=LOC[id];
+        out.innerHTML='<b>'+L.name+'</b> serves the '+zip+' area. Call <a href="tel:'+L.phone.replace(/-/g,'')+'">'+L.phone+'</a> or <a href="'+L.url+'">visit the location</a>.';
+        filterState(null);
+        cards.forEach(function(c){c.classList.toggle('match',c.dataset.id===id)});
+        if(f.closest('.util')){document.getElementById('locations').scrollIntoView({behavior:'smooth'});document.getElementById('loc-result').innerHTML=out.innerHTML}
+      }else{
+        out.innerHTML='We don\'t have a team in '+zip+' yet. Call <a href="tel:18777536243">1.877.753.6243</a>, or <a href="#franchise">bring Maid Green to your area</a>.';
+        if(f.closest('.util')){document.getElementById('locations').scrollIntoView({behavior:'smooth'});document.getElementById('loc-result').innerHTML=out.innerHTML}
+      }
+    });
+  });
+
+  // reviews carousel
+  var qs=[].slice.call(document.querySelectorAll('#qstage .q')), dots=document.getElementById('qdots'), qi=0, timer;
+  qs.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Review '+(i+1));b.addEventListener('click',function(){go(i)});dots.appendChild(b)});
+  function go(i){qi=(i+qs.length)%qs.length;qs.forEach(function(q,k){q.classList.toggle('on',k===qi)});[].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===qi)});clearInterval(timer);timer=setInterval(function(){go(qi+1)},6500)}
+  document.getElementById('qprev').addEventListener('click',function(){go(qi-1)});
+  document.getElementById('qnext').addEventListener('click',function(){go(qi+1)});
+  go(0);
+
+  // franchise form (front-end only)
+  document.getElementById('frform').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ffok').style.display='block';this.querySelectorAll('input,select,button').forEach(function(x){x.disabled=true})});
+})();
+</script>
+</body>
+</html>
