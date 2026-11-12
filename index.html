@@ -168,7 +168,7 @@ button,input,select{font:inherit}
 .about-art{position:relative}
 .about-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/4.4;box-shadow:var(--shadow)}
 .about-photo img{width:100%;height:100%;object-fit:cover}
-.about-cap{position:absolute;left:24px;bottom:24px;right:24px;background:rgba(16,41,27,.82);backdrop-filter:blur(8px);color:#fff;border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px}
+.about-cap{position:relative;margin:-34px 24px 0;z-index:3;background:rgba(16,41,27,.82);backdrop-filter:blur(8px);color:#fff;border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px}
 .about-cap b{font-family:var(--display);font-size:17px;display:block}
 .about-cap span{color:#BFD3BA}
 .ring{position:absolute;top:-46px;right:-36px;width:150px;height:150px;border-radius:50%;background:var(--lime);display:grid;place-items:center;box-shadow:var(--shadow)}
@@ -291,9 +291,10 @@ button,input,select{font:inherit}
 .fr .h2{margin:18px 0 22px}
 .fr .h2 em{color:var(--lime)}
 .fr .lead{color:#C2D4BE}
-.fr-photo{position:relative;border-radius:28px 160px 28px 28px;overflow:hidden;height:360px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
-.fr-photo img{width:100%;height:100%;object-fit:cover}
-.fr-photo .chip{position:absolute;left:18px;bottom:18px;background:var(--lime);color:var(--forest);font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px}
+.fr-photo{position:relative;height:360px}
+.fr-photo > img{box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.fr-photo > img{width:100%;height:100%;object-fit:cover}
+.fr-photo .chip{position:absolute;left:18px;bottom:18px;z-index:2;background:var(--lime);color:var(--forest);font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px}
 .perks{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:24px;overflow:hidden;margin:64px 0;position:relative}
 .perk{background:var(--forest);padding:28px 24px;transition:background .3s}
 .perk:hover{background:var(--forest-2)}
@@ -340,7 +341,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .final-actions .btn-primary{background:var(--forest)}
 .final-actions .btn-primary:hover{background:var(--green)}
 .final-img{position:relative}
-.final-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:180px 0 0 0}
+.final-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 22%;border-radius:180px 0 0 0}
 
 /* ===== footer ===== */
 .ft{background:var(--forest-3);color:#B8CBB3;padding:90px 0 34px;font-size:15px}
@@ -358,6 +359,77 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ft-contact li span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7E9879}
 .ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:60px;padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:#7E9879}
 .ft-bot a{color:#B8CBB3;text-decoration:underline;text-underline-offset:3px}
+
+
+/* hero video */
+.hero-video{color:#fff;background:var(--forest);min-height:min(820px, calc(100vh - 130px));display:flex;align-items:center;padding:90px 0 110px}
+.hero-video .wrap{grid-template-columns:1.15fr .85fr;align-items:end}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(11,31,20,.94) 0%, rgba(11,31,20,.80) 38%, rgba(11,31,20,.35) 70%, rgba(11,31,20,.15) 100%), linear-gradient(0deg, rgba(11,31,20,.55), transparent 40%)}
+.hero-video .wrap,.hero-video .leafdeco{position:relative;z-index:2}
+.hero-video .leafdeco{position:absolute}
+.hero-video .ld1{top:40px;right:6%;left:auto;width:64px;color:var(--lime);opacity:.5}
+.hero-video .badge{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(8px);box-shadow:none}
+.hero-video .badge .dot{background:var(--lime)}
+.hero-video .badge .dot svg{color:var(--forest)}
+.hero-video .h1 em{color:var(--lime)}
+.hero-video .lead{color:#D7E4D2}
+.hero-video .finder{border-color:transparent}
+.hero-video .zip-result{color:#D7E4D2}
+.hero-video .zip-result b{color:#fff}
+.hero-video .zip-result a{color:var(--lime);border-color:rgba(171,231,99,.5)}
+.hero-video .textlink{color:var(--lime);border-color:rgba(171,231,99,.4)}
+.hero-video .states span{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.hero-side{position:relative;height:300px}
+.hero-side .float{color:var(--ink)}
+.hero-side .f1{top:0;right:40px;left:auto}
+.hero-side .f2{top:110px;right:-10px;bottom:auto}
+.hero-side .seal{position:absolute;left:auto;right:250px;bottom:0;top:auto;width:110px}
+.vid-toggle{position:absolute;right:24px;bottom:24px;z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(11,31,20,.45);color:#fff;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.vid-toggle svg{width:18px;height:18px}
+.vid-toggle .i-play{display:none}
+.vid-toggle.paused .i-play{display:block}.vid-toggle.paused .i-pause{display:none}
+/* video cards */
+.svc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.svc:hover video{transform:scale(1.06)}
+.svc .live{position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(11,31,20,.55);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px}
+.svc .live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);animation:pulse 1.8s ease-out infinite}
+.svc.big .live{top:62px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(171,231,99,.7)}100%{box-shadow:0 0 0 10px rgba(171,231,99,0)}}
+/* message videos */
+.msgvid{position:relative;overflow:hidden;background:#000}
+.msgvid video{width:100%;height:100%;object-fit:cover;display:block}
+.msgvid .play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;border:0;background:var(--lime);color:var(--forest);cursor:pointer;display:grid;place-items:center;box-shadow:0 0 0 10px rgba(171,231,99,.25);transition:transform .25s, box-shadow .25s;z-index:2}
+.msgvid .play:hover{transform:scale(1.06);box-shadow:0 0 0 16px rgba(171,231,99,.2)}
+.msgvid .play svg{width:30px;height:30px;margin-left:4px}
+.msgvid.playing .play,.msgvid.playing .vlabel{opacity:0;pointer-events:none}
+.msgvid .vlabel{position:absolute;left:16px;top:16px;z-index:2;background:rgba(11,31,20,.7);backdrop-filter:blur(6px);color:#fff;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;transition:opacity .3s}
+.about-photo.msgvid{aspect-ratio:16/11}
+.fr-photo{overflow:visible}
+.fr-photo > img{border-radius:28px 160px 28px 28px}
+.fr-vid{position:absolute;right:-18px;bottom:-70px;width:200px;aspect-ratio:9/16;border-radius:24px;border:6px solid var(--forest-2);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.fr-vid .play{width:62px;height:62px}
+.fr-vid .play svg{width:24px;height:24px}
+.fr-vid .vlabel{left:10px;top:10px;font-size:11.5px;padding:6px 10px}
+@media (max-width:1024px){
+  .hero-video .wrap{grid-template-columns:1fr}
+  .hero-side{height:120px}
+  .hero-side .f1{left:0;right:auto;top:20px}
+  .hero-side .f2{left:240px;right:auto;top:20px}
+  .hero-side .seal{right:0;width:96px}
+  .fr-vid{right:12px}
+}
+@media (max-width:720px){
+  .hero-video{padding:56px 0 90px;min-height:0}
+  .hero-shade{background:linear-gradient(180deg, rgba(11,31,20,.78) 0%, rgba(11,31,20,.88) 60%, rgba(11,31,20,.95) 100%)}
+  .hero-side{height:auto;display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .hero-side .float{position:static;animation:none}
+  .hero-side .seal{display:none}
+  .hero-video .ld1{display:none}
+  .fr-photo{margin-bottom:40px}
+  .fr-vid{width:140px;bottom:-50px;right:10px;border-width:4px}
+  .msgvid .play{width:68px;height:68px}
+}
 
 /* ===== responsive ===== */
 @media (max-width:1480px){
@@ -529,9 +601,12 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 <main>
 <!-- ===== Hero ===== -->
-<section class="hero">
+<section class="hero hero-video">
+  <video class="hero-bg" id="herovid" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+    <source src="assets/video/hero-cleaning.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
   <svg class="leafdeco ld1" viewBox="0 0 100 160" aria-hidden="true"><use href="#i-botanic"/></svg>
-  <svg class="leafdeco ld2" viewBox="0 0 100 160" aria-hidden="true"><use href="#i-botanic"/></svg>
   <div class="wrap">
     <div class="hero-copy">
       <span class="badge rv"><span class="dot"><svg><use href="#i-leaf"/></svg></span>Serving families since 2006</span>
@@ -547,14 +622,13 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
         <div class="states"><span>Florida</span><span>Michigan</span><span>Illinois</span></div>
       </div>
     </div>
-    <div class="hero-art rv d2" aria-hidden="true">
-      <div class="ha-main"><img src="assets/living-room-team.jpg" alt=""></div>
-      <div class="ha-small"><img src="assets/01-window-cleaning.jpg" alt=""></div>
-      <img class="seal" src="assets/seal.png" alt="">
+    <div class="hero-side rv d3">
+      <img class="seal" src="assets/seal.png" alt="100% satisfaction guaranteed seal">
       <div class="float f1"><span class="ic"><svg><use href="#i-badge"/></svg></span><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></div>
       <div class="float f2"><span class="ic"><svg><use href="#i-shield"/></svg></span><span><b>Licensed, insured</b><small>&amp; bonded teams</small></span></div>
     </div>
   </div>
+  <button class="vid-toggle" id="herotoggle" aria-label="Pause background video"><svg class="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
 </section>
 
 <!-- ===== Trust marquee ===== -->
@@ -591,8 +665,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       <a class="btn btn-primary rv" href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">Discover Our Story <svg><use href="#i-arrow"/></svg></a>
     </div>
     <div class="about-art rv d2">
-      <div class="about-photo"><img src="assets/team-fleet.jpg" alt="The Maid Green Fox Valley team standing in front of their branded cars" loading="lazy"></div>
-      <div class="about-cap"><div><b>Real local teams</b><span>Maid Green Fox Valley, North Aurora, IL</span></div><svg width="34" height="34" style="color:var(--lime)"><use href="#i-leaf"/></svg></div>
+      <div class="about-photo msgvid" data-msgvid><span class="vlabel">A message from Maid Green</span><video preload="none" playsinline poster="assets/video/founder-poster.jpg"><source src="assets/video/founder-message.mp4" type="video/mp4"></video><button class="play" aria-label="Play video message"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></svg></button></div>
+      <div class="about-cap"><div><b>See the Maid Green way</b><span>Hear what makes our clean different</span></div><svg width="34" height="34" style="color:var(--lime)"><use href="#i-leaf"/></svg></div>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#circ">Made clean since · Made clean since ·</textPath></text></svg>
         <span class="yr">2006</span>
@@ -610,7 +684,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     </div>
     <div class="bento">
       <a class="svc big rv" href="https://www.maidgreen.com/services/residential-cleaning/">
-        <img src="assets/house-clean.jpg" alt="Maid Green cleaners vacuuming and dusting a living room" loading="lazy">
+        <video muted loop playsinline preload="none" poster="assets/video/residential-poster.jpg" data-src="assets/video/residential.mp4" aria-hidden="true"></video>
+        <span class="live">Live clean</span>
         <span class="tag">Most popular</span>
         <h3>Residential Cleaning</h3>
         <p>Customized house cleaning with green products, built around your home, your schedule and the details you care about.</p>
@@ -623,7 +698,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
         <p>Offices, banks, gyms, yoga studios, daycares, nursing homes and retail stores.</p>
       </a>
       <a class="svc rv d2" href="https://www.maidgreen.com/deep-cleaning-house-service-miami-why-maid-green-is-your-best-choice-2/">
-        <img src="assets/06-bathtub-polishing.jpg" alt="Cleaner polishing a bathtub" loading="lazy">
+        <video muted loop playsinline preload="none" poster="assets/video/deep-clean-poster.jpg" data-src="assets/video/deep-clean.mp4" aria-hidden="true"></video>
+        <span class="live">Live clean</span>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
         <h3>Deep Cleaning</h3>
         <p>A top-to-bottom reset for the spots regular cleans don't reach.</p>
@@ -635,13 +711,15 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
         <p>Weekly, bi-weekly or monthly visits that keep your home consistently fresh.</p>
       </a>
       <a class="svc rv" href="https://www.maidgreen.com/services/move-in-move-out-cleaning-miami/">
-        <img src="assets/move-clean.jpg" alt="Cleaners preparing a home during a move" loading="lazy">
+        <video muted loop playsinline preload="none" poster="assets/video/move-poster.jpg" data-src="assets/video/move.mp4" aria-hidden="true"></video>
+        <span class="live">Live clean</span>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
         <h3>Move-In &amp; Move-Out</h3>
         <p>Empty-home cleaning that gets you ready for keys, inspections and new beginnings.</p>
       </a>
       <a class="svc rv d1" href="https://www.maidgreen.com/services/window-cleaning-miami/">
-        <img src="assets/07-blind-cleaning.jpg" alt="Cleaner vacuuming window blinds" loading="lazy">
+        <video muted loop playsinline preload="none" poster="assets/video/window-poster.jpg" data-src="assets/video/window.mp4" aria-hidden="true"></video>
+        <span class="live">Live clean</span>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
         <h3>Window Cleaning</h3>
         <p>Streak-free glass, sills and blinds that let the light back in.</p>
@@ -781,7 +859,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
         <h2 class="h2 rv d1">Invest in your future <em>and your happiness.</em></h2>
         <p class="lead rv d2">Own a business built on recurring revenue, a recognized eco-friendly brand and a schedule that leaves room for life. Two easy options, one limitless brand.</p>
       </div>
-      <div class="fr-photo rv d2"><img src="assets/05-branded-fleet.jpg" alt="Maid Green branded cars parked outside a home" loading="lazy"><span class="chip">Your territory. Our brand.</span></div>
+      <div class="fr-photo rv d2"><img src="assets/05-branded-fleet.jpg" alt="Maid Green branded cars parked outside a home" loading="lazy"><span class="chip">Your territory. Our brand.</span>
+        <div class="fr-vid msgvid" data-msgvid><span class="vlabel">Why own a Maid Green</span><video preload="none" playsinline poster="assets/video/franchise-poster.jpg"><source src="assets/video/franchise-message.mp4" type="video/mp4"></video><button class="play" aria-label="Play franchise video"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></svg></button></div></div>
     </div>
 
     <div class="perks">
@@ -878,7 +957,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
           <a class="btn btn-ghost" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
         </div>
       </div>
-      <div class="final-img"><img src="assets/03-detail-cleaning.jpg" alt="Maid Green cleaner wiping down a bathroom" loading="lazy"></div>
+      <div class="final-img"><img src="assets/maid-green-owner.jpg" alt="Maid Green team member standing beside a Maid Green banner" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1021,6 +1100,23 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   document.getElementById('qprev').addEventListener('click',function(){go(qi-1)});
   document.getElementById('qnext').addEventListener('click',function(){go(qi+1)});
   go(0);
+
+  // hero video toggle
+  var hv=document.getElementById('herovid'), ht=document.getElementById('herotoggle');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){hv.pause();ht.classList.add('paused')}
+  ht.addEventListener('click',function(){if(hv.paused){hv.play();ht.classList.remove('paused');ht.setAttribute('aria-label','Pause background video')}else{hv.pause();ht.classList.add('paused');ht.setAttribute('aria-label','Play background video')}});
+
+  // service card loops: load and play only when visible
+  var cardVids=[].slice.call(document.querySelectorAll('.svc video[data-src]'));
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src){v.src=v.dataset.src}v.play().catch(function(){})}else{v.pause()}})},{threshold:.25});
+  cardVids.forEach(function(v){vio.observe(v)});
+
+  // message videos with sound
+  document.querySelectorAll('[data-msgvid]').forEach(function(box){
+    var v=box.querySelector('video'), b=box.querySelector('.play');
+    b.addEventListener('click',function(){document.querySelectorAll('[data-msgvid] video').forEach(function(o){if(o!==v)o.pause()});v.controls=true;v.play();box.classList.add('playing')});
+    v.addEventListener('ended',function(){box.classList.remove('playing');v.controls=false});
+  });
 
   // franchise form (front-end only)
   document.getElementById('frform').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ffok').style.display='block';this.querySelectorAll('input,select,button').forEach(function(x){x.disabled=true})});
