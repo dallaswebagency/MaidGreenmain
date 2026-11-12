@@ -556,15 +556,16 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .fr-pill{display:inline-flex;align-items:center;gap:12px;border:1.5px solid rgba(171,231,99,.45);background:rgba(171,231,99,.08);color:var(--lime);border-radius:999px;padding:9px 20px 9px 12px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
 .fr-pill i{width:22px;height:22px;border-radius:50%;background:rgba(171,231,99,.18);display:grid;place-items:center}
 .fr-pill i::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--lime)}
-.fr-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;margin:34px 0 36px}
-.fr-feats li{display:flex;gap:16px;align-items:flex-start}
+.fr-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:34px 0 34px}
+.fr-feats li{display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:24px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(171,231,99,.18);transition:background .3s, border-color .3s, transform .3s}
+.fr-feats li:hover{background:rgba(171,231,99,.08);border-color:rgba(171,231,99,.45);transform:translateY(-4px)}
 .fr-feats .ffi{width:56px;height:56px;border-radius:18px;background:rgba(171,231,99,.12);border:1px solid rgba(171,231,99,.18);color:var(--leaf);display:grid;place-items:center;flex:none;transition:background .3s, transform .3s}
 .fr-feats li:hover .ffi{background:var(--lime);color:var(--forest);transform:translateY(-3px)}
 .fr-feats .ffi svg{width:24px;height:24px}
-.fr-feats b{display:block;font-family:var(--display);font-size:19px;font-weight:700;color:#fff;margin-bottom:4px;line-height:1.2}
+.fr-feats b{display:block;font-family:var(--display);font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.15;letter-spacing:-.01em}
 .fr-feats span{color:#B9CDB5;font-size:15px;line-height:1.5}
 .fr-ctas{display:flex;flex-wrap:wrap;gap:12px}
-@media (max-width:720px){.fr-feats{grid-template-columns:1fr;gap:20px}.fr-feats .ffi{width:48px;height:48px;border-radius:15px}.fr-ctas .btn{width:100%;justify-content:center}}
+@media (max-width:720px){.fr-feats{grid-template-columns:1fr;gap:12px}.fr-feats li{padding:20px}.fr-feats .ffi{width:48px;height:48px;border-radius:15px}.fr-ctas .btn{width:100%;justify-content:center}}
 
 /* franchise image */
 .fr-img{position:relative;max-width:480px;justify-self:end;width:100%}
