@@ -327,7 +327,7 @@ button,input,select{font:inherit}
 .fr-photo > img{width:100%;height:100%;object-fit:cover}
 .fr-photo .chip{position:absolute;left:18px;bottom:18px;z-index:2;background:var(--lime);color:var(--forest);font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px}
 .perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:72px 0;position:relative}
-.perk{padding:28px 24px;border-radius:24px;color:var(--forest);transition:transform .35s, box-shadow .35s;position:relative;overflow:hidden}
+.perk{padding:32px 24px;border-radius:24px;color:var(--forest);transition:transform .35s, box-shadow .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center}
 .perk:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(0,0,0,.6)}
 .perk .pk{width:52px;height:52px;border-radius:16px;background:var(--forest);color:var(--lime);display:grid;place-items:center;margin-bottom:18px}
 .perk .pk svg{width:24px;height:24px}
@@ -994,10 +994,10 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     </div>
 
     <div class="perks">
-      <div class="perk c1 rv"><span class="pn2">01</span><span class="pk"><svg><use href="#i-chart"/></svg></span><h4>Decreasing royalty scale</h4><p>The more you make, the less you pay in royalties.</p></div>
-      <div class="perk c2 rv d1"><span class="pn2">02</span><span class="pk"><svg><use href="#i-repeat"/></svg></span><h4>80%+ repeat customers</h4><p>Most cleans come from repeat clients, for steadier income.</p></div>
-      <div class="perk c3 rv d2"><span class="pn2">03</span><span class="pk"><svg><use href="#i-sun"/></svg></span><h4>A balanced schedule</h4><p>A flexible workweek without late hours or weekends.</p></div>
-      <div class="perk c4 rv d3"><span class="pn2">04</span><span class="pk"><svg><use href="#i-box"/></svg></span><h4>Simple to run</h4><p>No inventory, minimal equipment and a recognized brand.</p></div>
+      <div class="perk c1 rv"><span class="pk"><svg><use href="#i-chart"/></svg></span><h4>Decreasing royalty scale</h4><p>The more you make, the less you pay in royalties.</p></div>
+      <div class="perk c2 rv d1"><span class="pk"><svg><use href="#i-repeat"/></svg></span><h4>80%+ repeat customers</h4><p>Most cleans come from repeat clients, for steadier income.</p></div>
+      <div class="perk c3 rv d2"><span class="pk"><svg><use href="#i-sun"/></svg></span><h4>A balanced schedule</h4><p>A flexible workweek without late hours or weekends.</p></div>
+      <div class="perk c4 rv d3"><span class="pk"><svg><use href="#i-box"/></svg></span><h4>Simple to run</h4><p>No inventory, minimal equipment and a recognized brand.</p></div>
     </div>
 
     <div class="plans-head">
