@@ -30,7 +30,6 @@ a{color:inherit;text-decoration:none}
 button,input,select{font:inherit}
 .wrap{width:min(1240px,100% - 48px);margin-inline:auto}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
 .h2{font-family:var(--display);font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.025em}
 .h2 em,.h1 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
 .lead{color:var(--muted);font-size:18px;max-width:560px}
@@ -425,11 +424,35 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .hero-side{height:auto;display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
   .hero-side .float{position:static;animation:none}
   .hero-side .seal{display:none}
+  .trust-card .tc-hero{padding-right:18px}
   .hero-video .ld1{display:none}
   .fr-photo{margin-bottom:40px}
   .fr-vid{width:140px;bottom:-50px;right:10px;border-width:4px}
   .msgvid .play{width:68px;height:68px}
 }
+
+
+/* hero trust card */
+.hero-side{height:auto}
+.trust-card{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.22);border-radius:24px;overflow:hidden;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.trust-card li{display:flex;gap:12px;align-items:center;padding:18px;background:rgba(11,31,20,.55);color:#fff;font-size:13.5px;line-height:1.3}
+.trust-card li b{display:block;font-size:15px;font-weight:600}
+.trust-card li small{color:#C9DAC4}
+.trust-card .tci{width:42px;height:42px;border-radius:14px;background:rgba(171,231,99,.16);color:var(--lime);display:grid;place-items:center;flex:none;border:1px solid rgba(171,231,99,.35)}
+.trust-card .tci svg{width:20px;height:20px}
+.trust-card li:not(.tc-hero){flex-direction:column;align-items:flex-start;gap:10px}
+.trust-card .tc-hero{grid-column:1/-1;padding-right:70px;background:var(--lime);color:var(--forest);padding:22px}
+.trust-card .tc-hero b{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1.05}
+.trust-card .tc-hero small{color:#2B4A33;font-size:14px}
+.trust-card .tc-hero .tci{background:var(--forest);color:var(--lime);border-color:var(--forest);width:50px;height:50px}
+.hero-side .seal{position:absolute;right:-26px;top:-56px;left:auto;bottom:auto;width:104px;z-index:3}
+@media (max-width:1024px){.hero-side{max-width:560px;margin-top:10px}.hero-side .seal{right:-8px}}
+@media (max-width:720px){.trust-card li{padding:14px 12px;font-size:12.5px;gap:10px}.trust-card .tci{width:36px;height:36px}.trust-card .tc-hero b{font-size:22px}.trust-card li b{font-size:14px}}
+/* promo video in reviews */
+.promo{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:1/1;max-width:340px;margin:6px 0 28px;box-shadow:var(--shadow);background:#000}
+.promo video{width:100%;height:100%;object-fit:cover;display:block}
+.promo .snd{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;background:var(--lime);color:var(--forest);font-weight:700;font-size:13px;border-radius:999px;padding:8px 14px}
+.promo .snd svg{width:16px;height:16px}
 
 /* ===== responsive ===== */
 @media (max-width:1480px){
@@ -625,30 +648,16 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     </div>
     <div class="hero-side rv d3">
       <img class="seal" src="assets/seal.png" alt="100% satisfaction guaranteed seal">
-      <div class="float f1"><span class="ic"><svg><use href="#i-badge"/></svg></span><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></div>
-      <div class="float f2"><span class="ic"><svg><use href="#i-shield"/></svg></span><span><b>Licensed, insured</b><small>&amp; bonded teams</small></span></div>
+      <ul class="trust-card" aria-label="Why families trust Maid Green">
+        <li class="tc-hero"><span class="tci"><svg><use href="#i-calendar"/></svg></span><span><b>20 Years In Business!</b><small>Keeping homes clean and green since 2006</small></span></li>
+        <li><span class="tci"><svg><use href="#i-badge"/></svg></span><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></li>
+        <li><span class="tci"><svg><use href="#i-star"/></svg></span><span><b>Thousands of</b><small>5 Star Reviews</small></span></li>
+        <li><span class="tci"><svg><use href="#i-shield"/></svg></span><span><b>Licensed, Insured</b><small>&amp; Bonded</small></span></li>
+      </ul>
     </div>
   </div>
   <button class="vid-toggle" id="herotoggle" aria-label="Pause background video"><svg class="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
 </section>
-
-<!-- ===== Trust marquee ===== -->
-<div class="marquee" aria-label="Maid Green highlights">
-  <div class="mq-track">
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Established in <i>2006</i></div>
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning approach</div>
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg><i>6</i> local locations in FL, MI &amp; IL</div>
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Residential &amp; commercial cleaning</div>
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Free re-clean if you're not happy</div>
-    <div class="mq-item"><svg><use href="#i-leaf"/></svg>Licensed, insured &amp; bonded</div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Established in <i>2006</i></div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning approach</div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg><i>6</i> local locations in FL, MI &amp; IL</div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Residential &amp; commercial cleaning</div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Free re-clean if you're not happy</div>
-    <div class="mq-item" aria-hidden="true"><svg><use href="#i-leaf"/></svg>Licensed, insured &amp; bonded</div>
-  </div>
-</div>
 
 <!-- ===== About ===== -->
 <section class="about" id="about">
@@ -726,7 +735,8 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
         <p>Streak-free glass, sills and blinds that let the light back in.</p>
       </a>
       <a class="svc rv d2" href="https://www.maidgreen.com/services/vacation-rental-cleaning-miami/">
-        <img src="assets/postcon-clean.jpg" alt="Team turning over a bright vacation rental" loading="lazy">
+        <video muted loop playsinline preload="none" poster="assets/video/vacation-poster.jpg" data-src="assets/video/vacation.mp4" aria-hidden="true"></video>
+        <span class="live">Live clean</span>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
         <h3>Vacation Rental Turnover</h3>
         <p>Fast, reliable turnovers between guests so your rental is always ready.</p>
@@ -831,10 +841,7 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       <span class="eyebrow rv">Customer reviews</span>
       <h2 class="h2 rv d1">Clean homes, <em>happy customers.</em></h2>
       <p class="lead rv d2">Families and businesses keep coming back to Maid Green for friendly teams, careful work and a clean they can trust.</p>
-      <div class="rv-badges rv d3">
-        <span><svg><use href="#i-star"/></svg>Thousands of 5-star reviews</span>
-        <span><svg><use href="#i-shield"/></svg>Licensed, insured &amp; bonded</span>
-      </div>
+      <div class="promo rv d3"><video id="promo" muted loop playsinline preload="none" poster="assets/video/promo-poster.jpg" data-src="assets/video/promo.mp4"></video><button class="snd" id="promosnd" aria-label="Turn sound on"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Sound on</span></button></div>
       <a class="textlink rv d4" href="https://www.maidgreen.com/testimonials/">Read more testimonials <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="quote-stage rv d2" id="qstage">
@@ -1108,9 +1115,13 @@ form.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   ht.addEventListener('click',function(){if(hv.paused){hv.play();ht.classList.remove('paused');ht.setAttribute('aria-label','Pause background video')}else{hv.pause();ht.classList.add('paused');ht.setAttribute('aria-label','Play background video')}});
 
   // service card loops: load and play only when visible
-  var cardVids=[].slice.call(document.querySelectorAll('.svc video[data-src]'));
+  var cardVids=[].slice.call(document.querySelectorAll('.svc video[data-src], #promo'));
   var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src){v.src=v.dataset.src}v.play().catch(function(){})}else{v.pause()}})},{threshold:.25});
   cardVids.forEach(function(v){vio.observe(v)});
+
+  // promo sound toggle
+  var pv=document.getElementById('promo'), ps=document.getElementById('promosnd');
+  ps.addEventListener('click',function(){if(!pv.src){pv.src=pv.dataset.src}pv.muted=!pv.muted;if(!pv.muted){pv.currentTime=0;pv.play()}ps.querySelector('span').textContent=pv.muted?'Sound on':'Sound off';ps.setAttribute('aria-label',pv.muted?'Turn sound on':'Turn sound off')});
 
   // message videos with sound
   document.querySelectorAll('[data-msgvid]').forEach(function(box){
