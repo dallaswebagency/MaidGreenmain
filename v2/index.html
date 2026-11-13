@@ -390,6 +390,7 @@ svg.ic{width:20px;height:20px;flex:none}
   .stage{min-height:480px}
   .promo{justify-self:start;transform:none}
   .states{grid-template-columns:1fr 1fr}
+  .states .state:nth-child(2){grid-row:span 2}
   .why{grid-template-columns:1fr 1fr}
   .prow{grid-template-columns:1fr 1fr;gap:18px}
   .prow p{grid-column:1/-1}
@@ -418,6 +419,7 @@ svg.ic{width:20px;height:20px;flex:none}
   .scap{flex-direction:column;align-items:flex-start;padding:24px}
   .qgrid{grid-template-columns:1fr}.q.big{grid-column:auto}
   .states{grid-template-columns:1fr}
+  .states .state:nth-child(2){grid-row:auto}
   .notyet{flex-direction:column;align-items:flex-start}
   .why{grid-template-columns:1fr}.wcell{min-height:0}
   .prow{grid-template-columns:1fr;padding:26px 22px}
@@ -431,6 +433,7 @@ svg.ic{width:20px;height:20px;flex:none}
   .ft-grid{grid-template-columns:1fr 1fr}
   .ft-contact{grid-column:1/-1}
 }
+@media (max-height:760px) and (max-width:1100px){.mnav{padding-top:116px}.mnav a.ml{font-size:22px;padding:8px 0}.mnav .mcta{margin-top:18px}}
 @media (max-width:480px){
   .wrap{width:calc(100% - 32px)}
   .finder{flex-direction:column;align-items:stretch;border-radius:22px;padding:8px}
