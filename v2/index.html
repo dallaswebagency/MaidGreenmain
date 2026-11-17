@@ -102,7 +102,40 @@ svg.ic{width:20px;height:20px;flex:none}
 .finder .btn{height:50px}
 .zres{margin-top:14px;font-size:15px;color:var(--muted);min-height:1px;max-width:560px}
 .zres b{color:var(--forest)}.zres a{color:var(--green);font-weight:700;text-decoration:underline}
-.hero-alt{margin-top:22px}
+.hero-ctas{display:flex;align-items:center;flex-wrap:wrap;gap:16px 30px}
+.btn-xl{height:62px;padding:0 34px;font-size:17px}
+/* quote modal */
+.qm{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .3s,visibility 0s .3s}
+.qm.open{visibility:visible;opacity:1;transition:opacity .3s}
+.qm-bg{position:absolute;inset:0;background:rgba(10,24,16,.62);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.qm-card{position:relative;width:min(560px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#fff;border-radius:26px;padding:34px 34px 26px;border-top:6px solid var(--green);box-shadow:0 40px 90px -30px rgba(0,0,0,.6);transform:translateY(20px) scale(.98);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.qm.open .qm-card{transform:none}
+.qm-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--cream);cursor:pointer;font-size:24px;line-height:1;color:var(--forest)}
+.qm-x:hover{background:var(--sage)}
+.qm-head{display:flex;align-items:center;gap:16px;margin-bottom:24px;padding-right:40px}
+.qm-head img{width:74px;height:74px;flex:none}
+.qm-head h3{font-family:var(--serif);font-weight:500;font-size:34px;letter-spacing:-.02em;line-height:1.05;color:var(--forest)}
+.qm-head p{font-size:15px;font-weight:700;color:var(--green);margin-top:6px}
+.qf{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qf .full{grid-column:1/-1}
+.qf input,.qf select{width:100%;height:56px;border-radius:14px;border:1.5px solid #E5E7DE;background:#F7F7F2;padding:0 18px;font-size:16px;color:var(--ink);outline:0;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+.qf select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2310291B' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;padding-right:44px}
+.qf select:invalid{color:#7A867E}
+.qf input::placeholder{color:#7A867E}
+.qf input:focus,.qf select:focus{border-color:var(--green);background:#fff}
+.qf .btn{grid-column:1/-1;height:60px;border-radius:16px;font-size:17px;background:var(--green);color:#fff;margin-top:4px}
+.qf .btn:hover{background:var(--forest)}
+.qm-foot{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:14px;color:var(--muted)}
+.qm-foot span{display:inline-flex;align-items:center;gap:7px}
+.qm-foot svg{width:15px;height:15px;color:var(--green)}
+.qm-foot .st{color:#F2B705;letter-spacing:2px}
+.qm-ok{display:none;text-align:center;padding:20px 0 6px}
+.qm-ok .ck{width:64px;height:64px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;margin:0 auto 16px}
+.qm-ok .ck svg{width:30px;height:30px}
+.qm-ok h4{font-size:24px;font-weight:800;color:var(--forest);margin-bottom:6px}
+.qm-ok p{color:var(--muted)}
+.qm.sent .qf,.qm.sent .qm-foot{display:none}.qm.sent .qm-ok{display:block}
+@media (max-width:560px){.qm{padding:12px;align-items:flex-end}.qm-card{padding:26px 20px 20px;border-radius:22px;max-height:calc(100vh - 24px)}.qm-head img{width:58px;height:58px}.qm-head h3{font-size:28px}.qf{gap:10px}.qf>*{grid-column:1/-1}.qf>select[name=bedrooms]{grid-column:1}.qf>select[name=bathrooms]{grid-column:2}.qf input,.qf select{height:52px}.qm-head p{font-size:14px}.btn-xl{width:100%}}
 .proof{display:grid;grid-template-columns:repeat(4,auto);gap:0;margin-top:44px;border-top:1px solid var(--line);padding-top:24px;justify-content:start}
 .proof li{list-style:none;display:flex;align-items:center;gap:10px;padding-right:22px;margin-right:22px;border-right:1px solid var(--line);font-size:13.5px;line-height:1.3}
 .proof li:last-child{border:0;margin:0;padding:0}
@@ -457,7 +490,7 @@ svg.ic{width:20px;height:20px;flex:none}
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
   <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/></symbol>
   <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 21V5l9-2v18M13 9h7v12M8 8h1M8 12h1M8 16h1M16 13h1M16 17h1M2 21h20"/></symbol>
@@ -528,12 +561,10 @@ svg.ic{width:20px;height:20px;flex:none}
       <span class="pill rv"><i><svg><use href="#i-leaf"/></svg></i>Serving families since 2006</span>
       <h1 class="h1 rv d1">A cleaner home. <em>A greener tomorrow.</em></h1>
       <p class="lead rv d2">Professional, eco-friendly cleaning services you can trust. Discover the Maid Green difference and find a local team ready to make your space shine.</p>
-      <form class="finder rv d3" data-zip aria-label="Find your local Maid Green by ZIP code">
-        <label><svg><use href="#i-pin"/></svg><input name="zip" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code"></label>
-        <button class="btn btn-primary" type="submit">Find Your Local Maid Green <svg><use href="#i-arrow"/></svg></button>
-      </form>
-      <div class="zres" aria-live="polite"></div>
-      <div class="hero-alt rv d3"><a class="tlink" href="#services">Explore Our Services <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="hero-ctas rv d3">
+        <button class="btn btn-primary btn-xl" type="button" data-quote>Get a Free Quote <svg><use href="#i-arrow"/></svg></button>
+        <a class="tlink" href="#services">Explore Our Services <svg><use href="#i-arrow"/></svg></a>
+      </div>
       <ul class="proof rv d4">
         <li><svg><use href="#i-calendar"/></svg><span><b>20 Years</b><small>In business</small></span></li>
         <li><svg><use href="#i-badge"/></svg><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></li>
@@ -600,13 +631,12 @@ svg.ic{width:20px;height:20px;flex:none}
     <div class="bento">
       <a class="svc big rv" href="https://www.maidgreen.com/services/residential-cleaning/">
         <video muted loop playsinline preload="none" poster="../assets/video/residential-poster.jpg" data-src="../assets/video/residential.mp4" aria-hidden="true"></video>
-        <span class="tag">Most popular</span>
         <h3>Residential Cleaning</h3>
         <p>Customized house cleaning with green products, built around your home, your schedule and the details you care about.</p>
         <span class="more">Learn more <svg><use href="#i-arrow"/></svg></span>
       </a>
       <a class="svc wide rv d1" href="https://www.maidgreen.com/services/commercial-cleaning/">
-        <img src="../assets/office-clean.jpg" alt="Maid Green team cleaning an office" loading="lazy">
+        <video muted loop playsinline preload="none" poster="../assets/video/sameday-poster.jpg" data-src="../assets/video/sameday.mp4" aria-hidden="true"></video>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
         <h3>Commercial Cleaning</h3>
         <p>Offices, banks, gyms, yoga studios, daycares, nursing homes and retail stores.</p>
@@ -712,7 +742,7 @@ svg.ic{width:20px;height:20px;flex:none}
     <div class="paths-h"><h3 class="rv">Choose your path</h3><p class="rv d1">Start fresh in a new territory or step into an established location with customers and staff already in place.</p></div>
     <div class="paths" id="paths">
       <article class="prow rv"><div><span class="pn">Eco-One</span><h4>A single territory</h4></div><div class="pp">Starting at<b>$17,550</b></div><p>Ideal for owners who want to be out in the community, not behind a desk all day. Build your business one happy home at a time.</p><a class="btn btn-lime" href="#frform" data-opt="Eco-One">Ask about Eco-One <svg><use href="#i-arrow"/></svg></a></article>
-      <article class="prow feat rv d1"><span class="flag">Most room to grow</span><div><span class="pn">Executive Green</span><h4>A multi-territory area</h4></div><div class="pp">Starting at<b>$45,500</b></div><p>Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation and a team around them.</p><a class="btn btn-primary" href="#frform" data-opt="Executive Green">Ask about Executive Green <svg><use href="#i-arrow"/></svg></a></article>
+      <article class="prow feat rv d1"><span class="flag">Most room to grow</span><div><span class="pn">Executive Green</span><h4>A multi-territory area</h4></div><div class="pp">Starting at<b>$47,500</b></div><p>Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation and a team around them.</p><a class="btn btn-primary" href="#frform" data-opt="Executive Green">Ask about Executive Green <svg><use href="#i-arrow"/></svg></a></article>
       <article class="prow rv d2"><div><span class="pn">Green Key</span><h4>An existing location</h4></div><div class="pp">Pricing<b>Call for details</b></div><p>Purchase an established Maid Green location that already has employees and customers, and start running from day one.</p><a class="btn btn-lime" href="#frform" data-opt="Green Key">Ask about Green Key <svg><use href="#i-arrow"/></svg></a></article>
     </div>
 
@@ -821,6 +851,28 @@ svg.ic{width:20px;height:20px;flex:none}
   </div>
 </footer>
 
+<div class="qm" id="qm" role="dialog" aria-modal="true" aria-labelledby="qm-title" aria-hidden="true">
+  <div class="qm-bg" data-close></div>
+  <div class="qm-card">
+    <button class="qm-x" type="button" aria-label="Close" data-close>&times;</button>
+    <div class="qm-head"><img src="../assets/seal.png" alt="100% satisfaction guaranteed"><div><h3 id="qm-title">Get a free quote</h3><p>Takes 60 seconds &middot; No obligation</p></div></div>
+    <form class="qf" id="qf">
+      <input name="name" placeholder="Your name" required aria-label="Your name" autocomplete="name">
+      <input name="phone" type="tel" placeholder="Phone number" required aria-label="Phone number" autocomplete="tel">
+      <input name="email" type="email" placeholder="Email address" required aria-label="Email address" autocomplete="email">
+      <input name="zip" inputmode="numeric" maxlength="5" placeholder="ZIP code" required aria-label="ZIP code" autocomplete="postal-code">
+      <input class="full" name="address" placeholder="Street address" aria-label="Street address" autocomplete="street-address">
+      <select class="full" name="service" required aria-label="Service"><option value="" disabled selected>Choose a service</option><option>Residential cleaning</option><option>Commercial cleaning</option><option>Deep cleaning</option><option>Recurring house cleaning</option><option>Move-in &amp; move-out</option><option>Window cleaning</option><option>Vacation rental turnover</option><option>Same-day cleaning</option></select>
+      <select name="bedrooms" aria-label="Bedrooms" required><option value="" disabled selected>Bedrooms</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      <select name="bathrooms" aria-label="Bathrooms" required><option value="" disabled selected>Bathrooms</option><option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>3.5</option><option>4+</option></select>
+      <input class="full" name="sqft" inputmode="numeric" placeholder="Square footage (e.g. 2,000)" aria-label="Square footage">
+      <button class="btn" type="submit">Get My Free Quote <svg><use href="#i-arrow"/></svg></button>
+    </form>
+    <div class="qm-foot"><span><svg><use href="#i-shield"/></svg>Your info stays private</span><span><b class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</b>1000+ Google reviews</span></div>
+    <div class="qm-ok" aria-live="polite"><div class="ck"><svg><use href="#i-check"/></svg></div><h4>Thank you!</h4><p>Your request is on its way. Your local Maid Green team will reach out within a few hours.</p></div>
+  </div>
+</div>
+
 <script>
 (function(){
   document.getElementById('yr').textContent=new Date().getFullYear();
@@ -896,6 +948,15 @@ svg.ic{width:20px;height:20px;flex:none}
   function step(d){var c=tr.querySelector('.tip');tr.scrollBy({left:d*(c.offsetWidth+18),behavior:'smooth'})}
   document.querySelector('.tnav .pv').addEventListener('click',function(){step(-1)});
   document.querySelector('.tnav .nx').addEventListener('click',function(){step(1)});
+
+  // quote modal
+  var qm=document.getElementById('qm'),lastFocus=null;
+  function openQ(){lastFocus=document.activeElement;qm.classList.add('open');qm.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(function(){qm.querySelector('input').focus()},250)}
+  function closeQ(){qm.classList.remove('open');qm.setAttribute('aria-hidden','true');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+  document.querySelectorAll('[data-quote]').forEach(function(b){b.addEventListener('click',openQ)});
+  qm.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',closeQ)});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&qm.classList.contains('open'))closeQ()});
+  document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();qm.classList.add('sent')});
 
   // franchise
   document.getElementById('paths').addEventListener('click',function(e){var a=e.target.closest('[data-opt]');if(a)document.getElementById('ffoption').value=a.dataset.opt});
