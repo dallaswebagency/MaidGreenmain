@@ -166,32 +166,31 @@ svg.ic{width:20px;height:20px;flex:none}
 .promise h4{font-size:16.5px;font-weight:800;margin-bottom:3px}
 .promise p{font-size:14.5px;color:var(--muted);line-height:1.5}
 
-/* services explorer */
+/* services */
 .svcs{padding:110px 0}
 .shead{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
 .shead .lead{max-width:44ch}
-.explorer{display:grid;grid-template-columns:400px 1fr;gap:28px;align-items:stretch}
-.slist{display:flex;flex-direction:column;gap:6px}
-.sbtn{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:0;background:transparent;padding:15px 18px;border-radius:18px;cursor:pointer;transition:background .25s,color .25s}
-.sbtn .si{flex:none;width:42px;height:42px;border-radius:12px;background:var(--sage);display:grid;place-items:center;color:var(--green);transition:background .25s,color .25s}
-.sbtn .si svg{width:20px;height:20px}
-.sbtn b{flex:1;font-size:17px;font-weight:700;letter-spacing:-.01em}
-.sbtn .ar{width:18px;height:18px;opacity:0;transform:translateX(-6px);transition:.25s}
-.sbtn:hover{background:var(--cream)}
-.sbtn.on{background:var(--forest);color:#fff}
-.sbtn.on .si{background:var(--lime);color:var(--forest)}
-.sbtn.on .ar{opacity:1;transform:none;color:var(--lime)}
-.stage{position:relative;border-radius:28px;overflow:hidden;background:var(--forest);min-height:560px}
-.stage video,.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .45s}
-.stage img{opacity:0}.stage.isimg img{opacity:1}.stage.isimg video{opacity:0}
-.stage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,41,27,.05) 35%,rgba(16,41,27,.88));pointer-events:none}
-.scap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:34px 36px;color:#fff;display:flex;align-items:end;justify-content:space-between;gap:24px}
-.scap .tag{display:inline-block;background:var(--lime);color:var(--forest);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:12px}
-.scap .tag:empty{display:none}
-.scap h3{font-size:clamp(28px,3vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:10px}
-.scap p{color:#DDE8D8;max-width:46ch}
-.scap .btn{flex:none}
-.scap .txt{animation:fadeUp .5s both}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:18px}
+.svc{position:relative;border-radius:26px;overflow:hidden;color:#fff;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;box-shadow:0 20px 40px -28px rgba(16,41,27,.5)}
+.svc img,.svc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.svc::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,31,20,0) 25%,rgba(11,31,20,.88) 100%);transition:background .4s}
+.svc:hover img,.svc:hover video{transform:scale(1.06)}
+.svc:hover::before{background:linear-gradient(180deg,rgba(11,31,20,.2) 0%,rgba(11,31,20,.94) 100%)}
+.svc .tag{position:absolute;top:22px;left:22px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--lime);color:var(--forest);padding:6px 12px;border-radius:999px}
+.svc h3{font-weight:800;font-size:24px;line-height:1.1;letter-spacing:-.02em}
+.svc p{font-size:14.5px;color:#D7E4D3;line-height:1.45;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s ease,opacity .4s ease,margin .4s;margin-top:0}
+.svc:hover p,.svc:focus-visible p{max-height:120px;opacity:1;margin-top:8px}
+.svc .go{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;transform:rotate(-45deg) scale(.85);opacity:.9;transition:transform .4s,opacity .4s}
+.svc .go svg{width:18px;height:18px}
+.svc:hover .go{transform:rotate(0) scale(1);opacity:1}
+.svc.big{grid-column:span 2;grid-row:span 2;padding:36px}
+.svc.big h3{font-size:clamp(30px,3vw,40px);letter-spacing:-.03em}
+.svc.big p{max-height:none;opacity:1;margin-top:10px;font-size:16px;max-width:430px}
+.svc.wide{grid-column:span 2}
+.svc.wide h3{font-size:28px}
+.svc.wide p{max-height:none;opacity:1;margin-top:8px;max-width:380px}
+.svc .more{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:var(--lime);margin-top:16px}
+.svc .more svg{width:16px;height:16px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}}
 .sfoot{margin-top:30px;display:flex;justify-content:flex-end}
 
@@ -387,12 +386,7 @@ svg.ic{width:20px;height:20px;flex:none}
   .hero-vis{max-width:640px;width:100%;margin:0 auto}
   .hv-frame{aspect-ratio:4/3.4}
   .about .wrap,.revs-top,.locs-top,.fr-hero{grid-template-columns:1fr;gap:44px}
-  .explorer{grid-template-columns:1fr}
-  .slist{flex-direction:row;overflow-x:auto;scrollbar-width:none;gap:8px;padding-bottom:4px}
-  .slist::-webkit-scrollbar{display:none}
-  .sbtn{flex:none;width:auto;padding:10px 16px 10px 10px;background:var(--cream)}
-  .sbtn b{font-size:15px;white-space:nowrap}.sbtn .ar{display:none}.sbtn .si{width:34px;height:34px;border-radius:10px}
-  .stage{min-height:480px}
+  .bento{grid-template-columns:repeat(2,1fr)}
   .promo{justify-self:start;transform:none}
   .states{grid-template-columns:1fr 1fr}
   .why{grid-template-columns:1fr 1fr}
@@ -419,8 +413,10 @@ svg.ic{width:20px;height:20px;flex:none}
   .about,.svcs,.revs,.locs,.tips{padding:80px 0}
   .fr{padding:90px 0 80px}
   .shead{flex-direction:column;align-items:flex-start;gap:16px}
-  .stage{min-height:0;aspect-ratio:3/4}
-  .scap{flex-direction:column;align-items:flex-start;padding:24px}
+  .bento{grid-template-columns:1fr;grid-auto-rows:230px}
+  .svc.big,.svc.wide{grid-column:auto}
+  .svc.big{grid-row:span 2;padding:28px}
+  .svc p{max-height:none;opacity:1;margin-top:6px}
   .qgrid{grid-template-columns:1fr}.q.big{grid-column:auto}
   .states{grid-template-columns:1fr}
   .notyet{flex-direction:column;align-items:flex-start}
@@ -594,29 +590,39 @@ svg.ic{width:20px;height:20px;flex:none}
   </div>
 </section>
 
-<!-- Services explorer -->
+<!-- Services -->
 <section class="svcs" id="services">
   <div class="wrap">
     <div class="shead">
       <div><span class="kicker rv"><svg><use href="#i-leaf"/></svg>Cleaning services</span><h2 class="h2 rv d1">Green cleaning for <em>every kind of space.</em></h2></div>
       <p class="lead rv d2">From weekly house cleaning to office janitorial and vacation rental turnovers, every Maid Green service uses the same eco-friendly approach.</p>
     </div>
-    <div class="explorer rv">
-      <div class="slist" id="slist" role="tablist" aria-label="Cleaning services">
-        <button class="sbtn on" role="tab" data-v="residential" data-tag="Most popular" data-t="Residential Cleaning" data-d="Customized house cleaning with green products, built around your home, your schedule and the details you care about." data-u="https://www.maidgreen.com/services/residential-cleaning/"><span class="si"><svg><use href="#i-home"/></svg></span><b>Residential Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-img="../assets/office-clean.jpg" data-t="Commercial Cleaning" data-d="Offices, banks, gyms, yoga studios, daycares, nursing homes and retail stores." data-u="https://www.maidgreen.com/services/commercial-cleaning/"><span class="si"><svg><use href="#i-building"/></svg></span><b>Commercial Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="deep-clean" data-t="Deep Cleaning" data-d="A top-to-bottom reset for the spots regular cleans don't reach." data-u="https://www.maidgreen.com/deep-cleaning-house-service-miami-why-maid-green-is-your-best-choice-2/"><span class="si"><svg><use href="#i-sparkle"/></svg></span><b>Deep Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="recurring" data-t="Recurring House Cleaning" data-d="Weekly, bi-weekly or monthly visits that keep your home consistently fresh." data-u="https://www.maidgreen.com/services/recurring-cleaning-miami/"><span class="si"><svg><use href="#i-repeat"/></svg></span><b>Recurring House Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="move" data-t="Move-In &amp; Move-Out" data-d="Empty-home cleaning that gets you ready for keys, inspections and new beginnings." data-u="https://www.maidgreen.com/services/move-in-move-out-cleaning-miami/"><span class="si"><svg><use href="#i-box"/></svg></span><b>Move-In &amp; Move-Out</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="window" data-t="Window Cleaning" data-d="Streak-free glass, sills and blinds that let the light back in." data-u="https://www.maidgreen.com/services/window-cleaning-miami/"><span class="si"><svg><use href="#i-sun"/></svg></span><b>Window Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="vacation" data-t="Vacation Rental Turnover" data-d="Fast, reliable turnovers between guests so your rental is always ready." data-u="https://www.maidgreen.com/services/vacation-rental-cleaning-miami/"><span class="si"><svg><use href="#i-map"/></svg></span><b>Vacation Rental Turnover</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-        <button class="sbtn" role="tab" data-v="sameday" data-t="Same-Day Cleaning" data-d="Guests on the way? Ask about same-day availability near you." data-u="https://www.maidgreen.com/services/same-day-cleaning-miami/"><span class="si"><svg><use href="#i-calendar"/></svg></span><b>Same-Day Cleaning</b><svg class="ar"><use href="#i-arrow"/></svg></button>
-      </div>
-      <div class="stage" id="stage">
-        <video id="svid" muted loop playsinline preload="none" poster="../assets/video/residential-poster.jpg" aria-hidden="true"></video>
-        <img id="simg" src="../assets/office-clean.jpg" alt="Maid Green team cleaning an office" loading="lazy">
-        <div class="scap"><div class="txt" id="stxt"><span class="tag">Most popular</span><h3>Residential Cleaning</h3><p>Customized house cleaning with green products, built around your home, your schedule and the details you care about.</p></div><a class="btn btn-lime" id="slink" href="https://www.maidgreen.com/services/residential-cleaning/">Learn More <svg><use href="#i-arrow"/></svg></a></div>
-      </div>
+    <div class="bento">
+      <a class="svc big rv" href="https://www.maidgreen.com/services/residential-cleaning/">
+        <video muted loop playsinline preload="none" poster="../assets/video/residential-poster.jpg" data-src="../assets/video/residential.mp4" aria-hidden="true"></video>
+        <span class="tag">Most popular</span>
+        <h3>Residential Cleaning</h3>
+        <p>Customized house cleaning with green products, built around your home, your schedule and the details you care about.</p>
+        <span class="more">Learn more <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc wide rv d1" href="https://www.maidgreen.com/services/commercial-cleaning/">
+        <img src="../assets/office-clean.jpg" alt="Maid Green team cleaning an office" loading="lazy">
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Commercial Cleaning</h3>
+        <p>Offices, banks, gyms, yoga studios, daycares, nursing homes and retail stores.</p>
+      </a>
+      <a class="svc rv d2" href="https://www.maidgreen.com/deep-cleaning-house-service-miami-why-maid-green-is-your-best-choice-2/">
+        <video muted loop playsinline preload="none" poster="../assets/video/deep-clean-poster.jpg" data-src="../assets/video/deep-clean.mp4" aria-hidden="true"></video>
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Deep Cleaning</h3>
+        <p>A top-to-bottom reset for the spots regular cleans don't reach.</p>
+      </a>
+      <a class="svc rv d3" href="https://www.maidgreen.com/services/recurring-cleaning-miami/">
+        <video muted loop playsinline preload="none" poster="../assets/video/recurring-poster.jpg" data-src="../assets/video/recurring.mp4" aria-hidden="true"></video>
+        <span class="go"><svg><use href="#i-arrow"/></svg></span>
+        <h3>Recurring House Cleaning</h3>
+        <p>Weekly, bi-weekly or monthly visits that keep your home consistently fresh.</p>
+      </a>
     </div>
     <div class="sfoot"><a class="tlink" href="https://www.maidgreen.com/services/">View all services <svg><use href="#i-arrow"/></svg></a></div>
   </div>
@@ -865,16 +871,10 @@ svg.ic{width:20px;height:20px;flex:none}
     });
   });
 
-  // services explorer
-  var btns=[].slice.call(document.querySelectorAll('.sbtn')),stage=document.getElementById('stage'),sv=document.getElementById('svid'),stxt=document.getElementById('stxt'),slink=document.getElementById('slink'),inView=false,cur=0;
-  function pick(i,manual){cur=i;var b=btns[i];btns.forEach(function(x,k){x.classList.toggle('on',k===i);x.setAttribute('aria-selected',k===i)});
-    if(b.dataset.img){stage.classList.add('isimg');sv.pause()}
-    else{stage.classList.remove('isimg');var src='../assets/video/'+b.dataset.v+'.mp4';sv.poster='../assets/video/'+b.dataset.v+'-poster.jpg';if(sv.getAttribute('src')!==src){sv.setAttribute('src',src)}if(inView)sv.play().catch(function(){})}
-    stxt.innerHTML='<span class="tag">'+(b.dataset.tag||'')+'</span><h3>'+b.dataset.t+'</h3><p>'+b.dataset.d+'</p>';slink.href=b.dataset.u;
-    if(manual&&b.scrollIntoView&&innerWidth<1100){b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})}
-  }
-  btns.forEach(function(b,i){b.addEventListener('click',function(){pick(i,true)});b.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches&&innerWidth>=1100)pick(i)})});
-  new IntersectionObserver(function(es){es.forEach(function(e){inView=e.isIntersecting;if(inView){if(!sv.getAttribute('src'))pick(cur);else if(!stage.classList.contains('isimg'))sv.play().catch(function(){})}else sv.pause()})},{threshold:.2}).observe(stage);
+  // service card videos: load and play only while visible
+  var cv=[].slice.call(document.querySelectorAll('.svc video[data-src]'));
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.getAttribute('src'))v.src=v.dataset.src;v.play().catch(function(){})}else v.pause()})},{threshold:.2});
+  cv.forEach(function(v){vio.observe(v)});
 
   // hero video toggle
   var hv=document.getElementById('herovid'),ht=document.getElementById('herotoggle');
