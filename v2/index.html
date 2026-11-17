@@ -493,6 +493,94 @@ svg.ic{width:20px;height:20px;flex:none}
   .since{width:92px;height:92px}.since b{font-size:24px}
   .fr-ctas .btn,.final .acts .btn,.ft-top .acts .btn{width:100%}
 }
+
+/* ===== light 3-colour palette (cream / sage / butter) ===== */
+:root{--c1:#FBFAF4;--c2:#EEF4E6;--c3:#FBF4DA}
+body{background:var(--c1)}
+.hero,.ways{background:var(--c1)}
+.about{background:var(--c2)}
+.svcs{background:var(--c3)}
+.revs{background:var(--c1)}
+.locs{background:var(--c2)}
+.fr{background:var(--c3);color:var(--ink)}
+.tips{background:var(--c1)}
+.ft{background:var(--c2)}
+/* ways tiles */
+.way.c{background:var(--c3);color:var(--forest);box-shadow:inset 0 0 0 1px rgba(16,41,27,.08)}
+.way.f{background:var(--c2);color:var(--forest);box-shadow:inset 0 0 0 1px rgba(16,41,27,.08)}
+.way.c .go,.way.f .go{background:var(--forest);color:var(--lime)}
+/* reviews */
+.q{box-shadow:inset 0 0 0 1px var(--line)}
+.q.big{background:var(--c2);color:var(--ink)}
+.q.big cite small{color:var(--muted)}
+/* locations */
+.lfind{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.lfind p{color:var(--muted)}
+.lfind .finder{box-shadow:inset 0 0 0 1.5px var(--line)}
+.lfind .zres{color:var(--muted)}.lfind .zres b{color:var(--forest)}.lfind .zres a{color:var(--green)}
+.office{background:#fff}
+/* franchise */
+.fr::before{background:radial-gradient(circle,rgba(140,198,63,.16),transparent 65%)}
+.fr .h2,.fr .h1{color:var(--forest)}
+.fr .h2 em,.fr .h1 em{color:var(--green)}
+.fr .lead{color:var(--muted)}
+.fr-tag{color:var(--green);border-color:rgba(44,122,68,.35)}
+.fr-tag i{background:var(--green);box-shadow:0 0 0 5px rgba(44,122,68,.15)}
+.fr .btn-lime{background:var(--forest);color:#fff}.fr .btn-lime:hover{background:var(--green)}
+.fr .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.fr .btn-line-light:hover{background:var(--forest);color:#fff}
+.ft-path{background:#fff;border-color:var(--line);color:var(--forest)}
+.ft-path:hover{background:#fff;border-color:var(--leaf)}
+.ft-path .pn{color:var(--green)}
+.ft-path .ar{background:var(--forest);color:var(--lime)}
+.fr-more{border-top-color:var(--line)}
+.fr-more p{color:var(--muted)}
+.why-h h3{color:var(--forest)}
+.wcell.o{background:#fff;border-color:var(--line)}
+.wcell.o .wi{background:var(--c2);color:var(--green)}
+.wcell.o p{color:var(--muted)}
+.wcell.c2{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.crumb{color:var(--muted)}.crumb a{color:var(--forest)}
+.fr-band{background:var(--c1)}
+.fr-formwrap{background:var(--c2)}
+.fr-form{box-shadow:inset 0 0 0 1px var(--line)}
+.community{color:var(--muted)}
+/* final CTA */
+.final{color:var(--ink)}
+.final::before{background:linear-gradient(90deg,rgba(251,244,218,.97) 0%,rgba(251,244,218,.9) 42%,rgba(251,244,218,0) 75%)}
+.final .h2 em{color:var(--green)}
+.final p{color:var(--muted)}
+.final .btn-lime{background:var(--forest);color:#fff}.final .btn-lime:hover{background:var(--green)}
+.final .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.final .btn-line-light:hover{background:var(--forest);color:#fff}
+/* footer */
+.ft{color:var(--muted)}
+.ft-top{border-bottom-color:var(--line)}
+.ft-top h2{color:var(--forest)}.ft-top h2 em{color:var(--green)}
+.ft .btn-lime{background:var(--forest);color:#fff}.ft .btn-lime:hover{background:var(--green)}
+.ft .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.ft .btn-line-light:hover{background:var(--forest);color:#fff}
+.ft h5{color:var(--forest)}
+.ft ul a:hover{color:var(--green)}
+.ft-contact li span{color:#7F947A}.ft-contact b{color:var(--forest)}
+.social a{border-color:rgba(16,41,27,.2);color:var(--forest)}.social a:hover{background:var(--forest);color:var(--lime)}
+.ft-bot{border-top-color:var(--line)}.ft-bot a{color:var(--forest)}
+@media (max-width:760px){.final::before{background:linear-gradient(180deg,rgba(251,244,218,.5),rgba(251,244,218,.97) 58%)}}
+
+/* sticky CTA bar */
+.ctabar{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--forest);color:#fff;transform:translateY(110%);transition:transform .4s cubic-bezier(.2,.7,.2,1);box-shadow:0 -14px 34px -18px rgba(0,0,0,.45)}
+.ctabar.show{transform:none}
+.ctabar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.cb-btns{display:flex;gap:12px}
+.cb-btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:12px;font-weight:700;font-size:15.5px;border:0;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.cb-btn svg{width:17px;height:17px}
+.cb-btn.a{background:#fff;color:var(--forest)}.cb-btn.a:hover{background:var(--lime);transform:translateY(-2px)}
+.cb-btn.b{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}.cb-btn.b:hover{background:#fff;color:var(--forest)}
+.cb-call{display:flex;align-items:center;gap:12px;font-weight:700;font-size:17px;white-space:nowrap}
+.cb-call span{color:#C8D8C2;font-weight:600}
+.cb-call a{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:20px}
+.cb-call a svg{width:20px;height:20px}
+.cb-call a:hover{color:#fff}
+body.has-ctabar{padding-bottom:78px}
+@media (max-width:860px){.cb-call span{display:none}}
+@media (max-width:640px){.ctabar .wrap{height:68px;gap:8px;width:calc(100% - 20px)}.cb-btns{flex:1;gap:8px}.cb-btn{flex:1;justify-content:center;height:46px;padding:0 10px;font-size:14px}.cb-btn svg{display:none}.cb-call a{width:46px;height:46px;border-radius:12px;background:var(--lime);color:var(--forest);justify-content:center;font-size:0}.cb-call a svg{width:20px;height:20px}body.has-ctabar{padding-bottom:68px}}
 </style>
 </head>
 <body>
@@ -856,6 +944,16 @@ svg.ic{width:20px;height:20px;flex:none}
   </div>
 </div>
 
+<div class="ctabar" id="ctabar" role="region" aria-label="Quick actions">
+  <div class="wrap">
+    <div class="cb-btns">
+      <button class="cb-btn a" type="button" data-quote>Get a Free Quote <svg><use href="#i-arrow"/></svg></button>
+      <a class="cb-btn b" href="#locations">Find Your Location</a>
+    </div>
+    <div class="cb-call"><span>Call for a free estimate!</span><a href="tel:18777536243" aria-label="Call 1.877.753.6243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a></div>
+  </div>
+</div>
+
 <script>
 (function(){
   document.getElementById('yr').textContent=new Date().getFullYear();
@@ -942,6 +1040,9 @@ svg.ic{width:20px;height:20px;flex:none}
   document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();qm.classList.add('sent')});
 
   // franchise
+  // sticky CTA bar
+  var cb=document.getElementById('ctabar');document.body.classList.add('has-ctabar');
+  function cbu(){cb.classList.toggle('show',scrollY>420)}addEventListener('scroll',cbu,{passive:true});cbu();
 })();
 </script>
 </body>
