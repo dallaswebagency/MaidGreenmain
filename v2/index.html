@@ -126,7 +126,7 @@ svg.ic{width:20px;height:20px;flex:none}
 .qf .btn{grid-column:1/-1;height:60px;border-radius:16px;font-size:17px;background:var(--green);color:#fff;margin-top:4px}
 .qf .btn:hover{background:var(--forest)}
 .qm-foot{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:14px;color:var(--muted)}
-.qm-foot span{display:inline-flex;align-items:center;gap:7px}
+.qm-foot span,.qm-foot a{display:inline-flex;align-items:center;gap:7px}.qm-foot a:hover{color:var(--green);text-decoration:underline}
 .qm-foot svg{width:15px;height:15px;color:var(--green)}
 .qm-foot .st{color:#F2B705;letter-spacing:2px}
 .qm-ok{display:none;text-align:center;padding:20px 0 6px}
@@ -141,6 +141,8 @@ svg.ic{width:20px;height:20px;flex:none}
 .proof li:last-child{border:0;margin:0;padding:0}
 .proof svg{width:22px;height:22px;color:var(--green)}
 .proof b{display:block;font-size:14.5px;color:var(--forest)}
+.proof a.glink{display:block}.proof a.glink:hover small{text-decoration:underline;color:var(--green)}
+.hv-g{transition:transform .25s}.hv-g:hover{transform:translateY(-3px)}
 .proof small{color:var(--muted);font-size:12.5px}
 .hero-vis{position:relative}
 .hv-frame{position:relative;border-radius:var(--leafshape);overflow:hidden;aspect-ratio:4/4.6;background:var(--forest);box-shadow:0 40px 80px -40px rgba(16,41,27,.6)}
@@ -514,7 +516,7 @@ svg.ic{width:20px;height:20px;flex:none}
 <div class="util">
   <div class="wrap">
     <span class="u hide"><svg><use href="#i-leaf"/></svg>Eco-friendly cleaning since 2006</span>
-    <a class="u hide2" href="https://www.google.com/search?q=Maid+Green+reviews" target="_blank" rel="noopener"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>1000+ 5-Star Reviews</a>
+    <a class="u hide2" href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>1000+ 5-Star Reviews</a>
     <a class="u" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
   </div>
 </div>
@@ -568,7 +570,7 @@ svg.ic{width:20px;height:20px;flex:none}
       <ul class="proof rv d4">
         <li><svg><use href="#i-calendar"/></svg><span><b>20 Years</b><small>In business</small></span></li>
         <li><svg><use href="#i-badge"/></svg><span><b>Featured in</b><small>Entrepreneur Magazine</small></span></li>
-        <li><svg><use href="#i-star"/></svg><span><b>1000+ 5 Star</b><small>Reviews on Google</small></span></li>
+        <li><svg><use href="#i-star"/></svg><a href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener" class="glink"><b>1000+ 5 Star</b><small>Reviews on Google</small></a></li>
         <li><svg><use href="#i-shield"/></svg><span><b>Licensed, Insured</b><small>&amp; Bonded</small></span></li>
       </ul>
     </div>
@@ -581,7 +583,7 @@ svg.ic{width:20px;height:20px;flex:none}
         </video>
         <button class="vtog" id="herotoggle" aria-label="Pause background video"><svg class="p1" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><svg class="p2" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4l13 8-13 8z"/></svg></button>
       </div>
-      <div class="hv-g"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><div><span class="st"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></div></div>
+      <a class="hv-g" href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener" aria-label="1000+ 5-star reviews on Google"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><div><span class="st"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></div></a>
       <div class="hv-years"><img src="../assets/seal.png" alt="100% satisfaction guaranteed seal"><div><b>20 Years In Business!</b><span>Keeping homes clean and green since 2006</span></div></div>
     </div>
   </div>
@@ -667,7 +669,7 @@ svg.ic{width:20px;height:20px;flex:none}
         <h2 class="h2 rv d1">Clean homes, <em>happy customers.</em></h2>
         <p class="lead rv d2">Families and businesses keep coming back to Maid Green for friendly teams, careful work and a clean they can trust.</p>
         <div class="rev-actions rv d3">
-          <a class="gbadge" href="https://www.google.com/search?q=Maid+Green+reviews" target="_blank" rel="noopener" aria-label="1000+ 5-star reviews on Google"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><span class="gs" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></span></a>
+          <a class="gbadge" href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener" aria-label="1000+ 5-star reviews on Google"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><span class="gs" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></span></a>
           <a class="tlink" href="https://www.maidgreen.com/testimonials/">Read more testimonials <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
@@ -810,7 +812,7 @@ svg.ic{width:20px;height:20px;flex:none}
       <div class="ft-brand">
         <img class="lg" src="../assets/logo.png" alt="Maid Green">
         <p>An environmentally friendly professional cleaning company, keeping homes and businesses clean and green since 2006.</p>
-        <a class="gbadge" href="https://www.google.com/search?q=Maid+Green+reviews" target="_blank" rel="noopener" aria-label="1000+ 5-star reviews on Google"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><span class="gs" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></span></a>
+        <a class="gbadge" href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener" aria-label="1000+ 5-star reviews on Google"><svg class="gl" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span><span class="gs" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>1000+ 5-Star Reviews</b><small>on Google</small></span></a>
         <div class="social">
           <a href="https://www.facebook.com/maidgreeninc/" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
           <a href="https://www.instagram.com/maidgreeninc/" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
@@ -868,7 +870,7 @@ svg.ic{width:20px;height:20px;flex:none}
       <input class="full" name="sqft" inputmode="numeric" placeholder="Square footage (e.g. 2,000)" aria-label="Square footage">
       <button class="btn" type="submit">Get My Free Quote <svg><use href="#i-arrow"/></svg></button>
     </form>
-    <div class="qm-foot"><span><svg><use href="#i-shield"/></svg>Your info stays private</span><span><b class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</b>1000+ Google reviews</span></div>
+    <div class="qm-foot"><span><svg><use href="#i-shield"/></svg>Your info stays private</span><a href="https://share.google/wJdgOGrqGuwJZ8DPu" target="_blank" rel="noopener"><b class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</b>1000+ Google reviews</a></div>
     <div class="qm-ok" aria-live="polite"><div class="ck"><svg><use href="#i-check"/></svg></div><h4>Thank you!</h4><p>Your request is on its way. Your local Maid Green team will reach out within a few hours.</p></div>
   </div>
 </div>
