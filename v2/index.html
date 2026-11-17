@@ -356,6 +356,19 @@ svg.ic{width:20px;height:20px;flex:none}
 .community{display:flex;align-items:center;gap:14px;margin-top:30px;color:#C8D8C2;font-size:15px}
 .community svg{width:22px;height:22px;color:#F49AC1;flex:none}
 
+.fr-hero{margin-bottom:56px}
+.fr-teaser{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}
+.ft-path{position:relative;display:block;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:22px;padding:24px 70px 24px 26px;transition:background .25s,transform .25s,border-color .25s}
+.ft-path:hover{background:rgba(255,255,255,.08);border-color:rgba(171,231,99,.5);transform:translateY(-3px)}
+.ft-path .pn{display:block;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:6px}
+.ft-path b{font-size:21px;font-weight:800;letter-spacing:-.02em}
+.ft-path .ar{position:absolute;right:20px;top:50%;margin-top:-20px;width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;transform:rotate(-45deg);transition:transform .25s}
+.ft-path:hover .ar{transform:none}
+.ft-path .ar svg{width:16px;height:16px}
+.fr-more{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid rgba(255,255,255,.12);padding-top:28px}
+.fr-more p{color:#C8D8C2;max-width:60ch}
+@media (max-width:1100px){.fr-teaser{grid-template-columns:1fr}.fr-more{flex-direction:column;align-items:flex-start}}
+@media (max-width:480px){.fr-more .btn{width:100%}}
 /* tips */
 .tips{padding:110px 0;background:var(--cream);overflow:hidden}
 .tips-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}
@@ -529,12 +542,12 @@ svg.ic{width:20px;height:20px;flex:none}
       <a href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a>
       <a href="https://www.maidgreen.com/services/">Cleaning Services</a>
       <a href="#locations">Locations</a>
-      <a href="#franchise">Franchise Opportunities</a>
+      <a href="franchise.html">Franchise Opportunities</a>
       <a href="https://www.maidgreen.com/category/blog/">Resources</a>
       <a href="https://www.maidgreen.com/contact/">Contact</a>
     </nav>
     <div class="hdr-cta">
-      <a class="btn btn-line ghost" href="#franchise">Franchise With Us</a>
+      <a class="btn btn-line ghost" href="franchise.html">Franchise With Us</a>
       <a class="btn btn-primary" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a>
     </div>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -545,12 +558,12 @@ svg.ic{width:20px;height:20px;flex:none}
   <a class="ml" href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a>
   <a class="ml" href="https://www.maidgreen.com/services/">Cleaning Services</a>
   <a class="ml" href="#locations">Locations</a>
-  <a class="ml" href="#franchise">Franchise Opportunities</a>
+  <a class="ml" href="franchise.html">Franchise Opportunities</a>
   <a class="ml" href="https://www.maidgreen.com/category/blog/">Resources</a>
   <a class="ml" href="https://www.maidgreen.com/contact/">Contact</a>
   <div class="mcta">
     <a class="btn btn-lime" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a>
-    <a class="btn btn-line-light" href="#franchise">Franchise With Us</a>
+    <a class="btn btn-line-light" href="franchise.html">Franchise With Us</a>
     <a class="btn btn-line-light" href="tel:18777536243"><svg><use href="#i-phone"/></svg>1.877.753.6243</a>
   </div>
 </div>
@@ -719,7 +732,7 @@ svg.ic{width:20px;height:20px;flex:none}
         <h2 class="h2 rv d1">Own a <em>Maid Green</em> franchise.</h2>
         <p class="lead rv d2">Bring eco-friendly cleaning to your community. Join a proven green cleaning brand with training, systems and support from day one.</p>
         <div class="fr-ctas rv d3">
-          <a class="btn btn-lime" href="#frform">Inquire About a Franchise <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-lime" href="franchise.html#frform">Inquire About a Franchise <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-line-light" href="tel:18777536243"><svg><use href="#i-phone"/></svg>Call 1.877.753.6243</a>
         </div>
       </div>
@@ -729,44 +742,12 @@ svg.ic{width:20px;height:20px;flex:none}
       </div>
     </div>
 
-    <div class="why-h"><h3 class="rv">Why owners choose Maid Green</h3></div>
-    <div class="why">
-      <div class="wcell o rv"><span class="wi"><svg><use href="#i-leaf"/></svg></span><h4>Green brand since 2006</h4><p>An established eco-friendly name families already trust.</p></div>
-      <div class="wcell o rv d1"><span class="wi"><svg><use href="#i-home"/></svg></span><h4>Full training &amp; systems</h4><p>Hiring, scheduling and cleaning processes ready to run.</p></div>
-      <div class="wcell o rv d2"><span class="wi"><svg><use href="#i-users"/></svg></span><h4>Ongoing support</h4><p>Marketing help and a team behind you after launch.</p></div>
-      <div class="wcell o rv d3"><span class="wi"><svg><use href="#i-pin"/></svg></span><h4>Protected territory</h4><p>Grow your business in your own local market.</p></div>
-      <div class="wcell c1 rv"><span class="wi"><svg><use href="#i-chart"/></svg></span><h4>Decreasing royalty scale</h4><p>The more you make, the less you pay in royalties.</p></div>
-      <div class="wcell c2 rv d1"><span class="wi"><svg><use href="#i-repeat"/></svg></span><h4>80%+ repeat customers</h4><p>Most cleans come from repeat clients, for steadier income.</p></div>
-      <div class="wcell c3 rv d2"><span class="wi"><svg><use href="#i-sun"/></svg></span><h4>A balanced schedule</h4><p>A flexible workweek without late hours or weekends.</p></div>
-      <div class="wcell c4 rv d3"><span class="wi"><svg><use href="#i-box"/></svg></span><h4>Simple to run</h4><p>No inventory, minimal equipment and a recognized brand.</p></div>
+    <div class="fr-teaser">
+      <a class="ft-path rv" href="franchise.html#paths-sec"><span class="pn">Eco-One</span><b>A single territory</b><span class="ar"><svg><use href="#i-arrow"/></svg></span></a>
+      <a class="ft-path rv d1" href="franchise.html#paths-sec"><span class="pn">Executive Green</span><b>A multi-territory area</b><span class="ar"><svg><use href="#i-arrow"/></svg></span></a>
+      <a class="ft-path rv d2" href="franchise.html#paths-sec"><span class="pn">Green Key</span><b>An existing location</b><span class="ar"><svg><use href="#i-arrow"/></svg></span></a>
     </div>
-
-    <div class="paths-h"><h3 class="rv">Choose your path</h3><p class="rv d1">Start fresh in a new territory or step into an established location with customers and staff already in place.</p></div>
-    <div class="paths" id="paths">
-      <article class="prow rv"><div><span class="pn">Eco-One</span><h4>A single territory</h4></div><div class="pp">Starting at<b>$17,550</b></div><p>Ideal for owners who want to be out in the community, not behind a desk all day. Build your business one happy home at a time.</p><a class="btn btn-lime" href="#frform" data-opt="Eco-One">Ask about Eco-One <svg><use href="#i-arrow"/></svg></a></article>
-      <article class="prow feat rv d1"><span class="flag">Most room to grow</span><div><span class="pn">Executive Green</span><h4>A multi-territory area</h4></div><div class="pp">Starting at<b>$47,500</b></div><p>Covers approximately 5 territories within one franchise area, for owners ready to build a larger operation and a team around them.</p><a class="btn btn-primary" href="#frform" data-opt="Executive Green">Ask about Executive Green <svg><use href="#i-arrow"/></svg></a></article>
-      <article class="prow rv d2"><div><span class="pn">Green Key</span><h4>An existing location</h4></div><div class="pp">Pricing<b>Call for details</b></div><p>Purchase an established Maid Green location that already has employees and customers, and start running from day one.</p><a class="btn btn-lime" href="#frform" data-opt="Green Key">Ask about Green Key <svg><use href="#i-arrow"/></svg></a></article>
-    </div>
-
-    <div class="fr-form rv">
-      <div class="ffs">
-        <h3>Start the conversation.</h3>
-        <p>Tell us a little about you and where you'd like to open. Our franchise team will be in touch.</p>
-        <form class="ff" id="frform">
-          <input name="name" placeholder="Full name" required aria-label="Full name">
-          <input name="phone" type="tel" placeholder="Phone number" required aria-label="Phone number">
-          <input class="full" name="email" type="email" placeholder="Email address" required aria-label="Email address">
-          <input name="area" placeholder="City or area of interest" aria-label="City or area of interest">
-          <select name="option" id="ffoption" aria-label="Franchise option"><option value="">Option of interest</option><option>Eco-One</option><option>Executive Green</option><option>Green Key</option><option>Not sure yet</option></select>
-          <button class="btn btn-primary full" type="submit">Request Franchise Info <svg><use href="#i-arrow"/></svg></button>
-          <div class="ffok" id="ffok">Thank you! Our franchise team will reach out soon.</div>
-        </form>
-        <div class="cline"><a href="mailto:franchise@maidgreen.com"><svg><use href="#i-mail"/></svg>franchise@maidgreen.com</a><a href="tel:18777536243"><svg><use href="#i-phone"/></svg>(877) 753-6243</a></div>
-        <p class="fine">This information is not an offer to sell a franchise. Offers are made only by Franchise Disclosure Document. Maid Green is currently registered to offer franchises in Illinois and Michigan.</p>
-      </div>
-      <div class="ffimg"><img src="../assets/maid-green-expo-booth.jpg" alt="The Maid Green team at their branded booth at a home show" loading="lazy"><span class="chip">Your territory. Our brand.</span></div>
-    </div>
-    <div class="community rv"><svg><use href="#i-heart"/></svg><span>Giving back since 2010: Maid Green partners with Cleaning for a Reason to provide free cleanings for women going through cancer treatment.</span></div>
+    <div class="fr-more rv"><p>Training, ongoing support, protected territories and a decreasing royalty scale. See every option and its pricing on our franchise page.</p><a class="btn btn-lime" href="franchise.html">Explore the Franchise Opportunity <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -806,7 +787,7 @@ svg.ic{width:20px;height:20px;flex:none}
   <div class="wrap">
     <div class="ft-top">
       <h2>Clean and green <em>since 2006.</em></h2>
-      <div class="acts"><a class="btn btn-lime" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a><a class="btn btn-line-light" href="#franchise">Franchise With Us</a></div>
+      <div class="acts"><a class="btn btn-lime" href="#locations">Find Your Location <svg><use href="#i-arrow"/></svg></a><a class="btn btn-line-light" href="franchise.html">Franchise With Us</a></div>
     </div>
     <div class="ft-grid">
       <div class="ft-brand">
@@ -829,7 +810,7 @@ svg.ic{width:20px;height:20px;flex:none}
       </ul></div>
       <div><h5>Company</h5><ul>
         <li><a href="https://www.maidgreen.com/about-maid-green-keep-it-clean/">About Us</a></li>
-        <li><a href="#franchise">Franchise</a></li>
+        <li><a href="franchise.html">Franchise</a></li>
         <li><a href="https://www.maidgreen.com/testimonials/">Testimonials</a></li>
         <li><a href="https://www.maidgreen.com/press/">Press</a></li>
         <li><a href="https://www.maidgreen.com/faq/">FAQ</a></li>
@@ -961,8 +942,6 @@ svg.ic{width:20px;height:20px;flex:none}
   document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();qm.classList.add('sent')});
 
   // franchise
-  document.getElementById('paths').addEventListener('click',function(e){var a=e.target.closest('[data-opt]');if(a)document.getElementById('ffoption').value=a.dataset.opt});
-  document.getElementById('frform').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ffok').style.display='block';this.querySelectorAll('input,select,button').forEach(function(x){x.disabled=true})});
 })();
 </script>
 </body>
