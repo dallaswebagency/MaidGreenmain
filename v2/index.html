@@ -771,7 +771,7 @@ body.has-ctabar{padding-bottom:78px}
           <a class="tlink" href="https://www.maidgreen.com/testimonials/">Read more testimonials <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
-      <div class="promo rv d2"><video id="promo" muted loop playsinline preload="none" poster="../assets/video/promo-poster.jpg" data-src="../assets/video/promo.mp4"></video><button class="snd" id="promosnd" aria-label="Turn sound on"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 9v6h4l5 5V4L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg><span>Sound on</span></button></div>
+      <div class="promo rv d2"><video id="promo" muted loop playsinline preload="none" poster="../assets/video/promo-poster.jpg" data-src="../assets/video/promo.mp4"></video></div>
     </div>
     <div class="qgrid">
       <figure class="q big rv"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>The girls from Maid Green, Darlene and Ann, are top notch professionals!</blockquote><cite><span class="av">J</span><span>James<small>Maid Green customer</small></span></cite></figure>
@@ -1014,9 +1014,8 @@ body.has-ctabar{padding-bottom:78px}
   ht.addEventListener('click',function(){if(hv.paused){hv.play();ht.classList.remove('paused');ht.setAttribute('aria-label','Pause background video')}else{hv.pause();ht.classList.add('paused');ht.setAttribute('aria-label','Play background video')}});
 
   // promo
-  var pv=document.getElementById('promo'),ps=document.getElementById('promosnd');
+  var pv=document.getElementById('promo');
   new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!pv.src)pv.src=pv.dataset.src;pv.play().catch(function(){})}else pv.pause()})},{threshold:.25}).observe(pv);
-  ps.addEventListener('click',function(){if(!pv.src)pv.src=pv.dataset.src;pv.muted=!pv.muted;if(!pv.muted){pv.currentTime=0;pv.play()}ps.querySelector('span').textContent=pv.muted?'Sound on':'Sound off';ps.setAttribute('aria-label',pv.muted?'Turn sound on':'Turn sound off')});
 
   // founder video
   document.querySelectorAll('[data-msgvid]').forEach(function(box){var v=box.querySelector('video'),b=box.querySelector('.play');
