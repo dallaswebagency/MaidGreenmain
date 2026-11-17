@@ -164,7 +164,7 @@ svg.ic{width:20px;height:20px;flex:none}
 @keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(4deg) translateY(-4px)}}
 
 /* two paths */
-.ways{padding:20px 0 90px}
+.ways{padding:20px 0 60px}
 .ways .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .way{position:relative;border-radius:var(--r);padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;transition:transform .3s}
 .way:hover{transform:translateY(-4px)}
@@ -369,6 +369,17 @@ svg.ic{width:20px;height:20px;flex:none}
 .fr-more p{color:#C8D8C2;max-width:60ch}
 @media (max-width:1100px){.fr-teaser{grid-template-columns:1fr}.fr-more{flex-direction:column;align-items:flex-start}}
 @media (max-width:480px){.fr-more .btn{width:100%}}
+/* featured in */
+.feat{background:var(--c1,#FBFAF4);padding:10px 0 90px}
+.feat-head{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.feat-head .kicker{margin:0}
+.feat-head p{color:var(--muted);font-size:15.5px}
+.feat-grid{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.fl{background:#fff;border-radius:18px;height:120px;display:grid;place-items:center;padding:14px 18px;box-shadow:inset 0 0 0 1px var(--line);transition:transform .25s,box-shadow .25s}
+.fl img{max-height:78px;max-width:100%;width:auto;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .3s,opacity .3s}
+.fl:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px var(--leaf),0 16px 30px -22px rgba(16,41,27,.45)}
+.fl:hover img{filter:none;opacity:1}
+@media (max-width:860px){.feat-grid{grid-template-columns:repeat(10,150px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;margin-right:-24px;padding-right:24px}.feat-grid::-webkit-scrollbar{display:none}.fl{scroll-snap-align:start;height:104px}.fl img{filter:none;opacity:1}}
 /* tips */
 .tips{padding:110px 0;background:var(--cream);overflow:hidden}
 .tips-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}
@@ -502,9 +513,7 @@ body{background:var(--c1)}
 .svcs{background:var(--c3)}
 .revs{background:var(--c1)}
 .locs{background:var(--c2)}
-.fr{background:var(--c3);color:var(--ink)}
 .tips{background:var(--c1)}
-.ft{background:var(--c2)}
 /* ways tiles */
 .way.c{background:var(--c3);color:var(--forest);box-shadow:inset 0 0 0 1px rgba(16,41,27,.08)}
 .way.f{background:var(--c2);color:var(--forest);box-shadow:inset 0 0 0 1px rgba(16,41,27,.08)}
@@ -519,31 +528,12 @@ body{background:var(--c1)}
 .lfind .finder{box-shadow:inset 0 0 0 1.5px var(--line)}
 .lfind .zres{color:var(--muted)}.lfind .zres b{color:var(--forest)}.lfind .zres a{color:var(--green)}
 .office{background:#fff}
-/* franchise */
-.fr::before{background:radial-gradient(circle,rgba(140,198,63,.16),transparent 65%)}
-.fr .h2,.fr .h1{color:var(--forest)}
-.fr .h2 em,.fr .h1 em{color:var(--green)}
-.fr .lead{color:var(--muted)}
-.fr-tag{color:var(--green);border-color:rgba(44,122,68,.35)}
-.fr-tag i{background:var(--green);box-shadow:0 0 0 5px rgba(44,122,68,.15)}
-.fr .btn-lime{background:var(--forest);color:#fff}.fr .btn-lime:hover{background:var(--green)}
-.fr .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.fr .btn-line-light:hover{background:var(--forest);color:#fff}
-.ft-path{background:#fff;border-color:var(--line);color:var(--forest)}
-.ft-path:hover{background:#fff;border-color:var(--leaf)}
-.ft-path .pn{color:var(--green)}
-.ft-path .ar{background:var(--forest);color:var(--lime)}
-.fr-more{border-top-color:var(--line)}
-.fr-more p{color:var(--muted)}
-.why-h h3{color:var(--forest)}
-.wcell.o{background:#fff;border-color:var(--line)}
-.wcell.o .wi{background:var(--c2);color:var(--green)}
-.wcell.o p{color:var(--muted)}
-.wcell.c2{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
-.crumb{color:var(--muted)}.crumb a{color:var(--forest)}
+/* franchise page light bands */
 .fr-band{background:var(--c1)}
 .fr-formwrap{background:var(--c2)}
 .fr-form{box-shadow:inset 0 0 0 1px var(--line)}
 .community{color:var(--muted)}
+.fr .community{color:#C8D8C2}
 /* final CTA */
 .final{color:var(--ink)}
 .final::before{background:linear-gradient(90deg,rgba(251,244,218,.97) 0%,rgba(251,244,218,.9) 42%,rgba(251,244,218,0) 75%)}
@@ -551,17 +541,6 @@ body{background:var(--c1)}
 .final p{color:var(--muted)}
 .final .btn-lime{background:var(--forest);color:#fff}.final .btn-lime:hover{background:var(--green)}
 .final .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.final .btn-line-light:hover{background:var(--forest);color:#fff}
-/* footer */
-.ft{color:var(--muted)}
-.ft-top{border-bottom-color:var(--line)}
-.ft-top h2{color:var(--forest)}.ft-top h2 em{color:var(--green)}
-.ft .btn-lime{background:var(--forest);color:#fff}.ft .btn-lime:hover{background:var(--green)}
-.ft .btn-line-light{color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}.ft .btn-line-light:hover{background:var(--forest);color:#fff}
-.ft h5{color:var(--forest)}
-.ft ul a:hover{color:var(--green)}
-.ft-contact li span{color:#7F947A}.ft-contact b{color:var(--forest)}
-.social a{border-color:rgba(16,41,27,.2);color:var(--forest)}.social a:hover{background:var(--forest);color:var(--lime)}
-.ft-bot{border-top-color:var(--line)}.ft-bot a{color:var(--forest)}
 @media (max-width:760px){.final::before{background:linear-gradient(180deg,rgba(251,244,218,.5),rgba(251,244,218,.97) 58%)}}
 
 /* sticky CTA bar */
@@ -695,6 +674,14 @@ body.has-ctabar{padding-bottom:78px}
   <div class="wrap">
     <a class="way c rv" href="#locations"><div><small>For homes &amp; businesses</small><h3>Find your local Maid Green</h3></div><span class="go"><svg><use href="#i-arrow"/></svg></span><svg class="bg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg></a>
     <a class="way f rv d1" href="#franchise"><div><small>For future owners</small><h3>Own a Maid Green franchise</h3></div><span class="go"><svg><use href="#i-arrow"/></svg></span><svg class="bg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg></a>
+  </div>
+</section>
+
+<!-- Featured in -->
+<section class="feat" aria-labelledby="feat-h">
+  <div class="wrap">
+    <div class="feat-head rv"><span class="kicker"><svg><use href="#i-leaf"/></svg>As featured in</span><p id="feat-h">Recognized by the press, partners and green organizations since 2006.</p></div>
+    <ul class="feat-grid"><li class="fl rv"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-6.jpg" alt="7 News Miami" loading="lazy"></li><li class="fl rv d1"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-7.jpg" alt="Entrepreneur Magazine" loading="lazy"></li><li class="fl rv d2"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-8.jpg" alt="Green Maven" loading="lazy"></li><li class="fl rv d3"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-9.jpg" alt="Cleaning for a Reason" loading="lazy"></li><li class="fl rv"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-10.png" alt="Eco-Champion, Green Umbrella" loading="lazy"></li><li class="fl rv d1"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-1.jpg" alt="Daily Candy" loading="lazy"></li><li class="fl rv d2"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-2.jpg" alt="The Miami Herald" loading="lazy"></li><li class="fl rv d3"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-4.jpg" alt="Local 10 WPLG" loading="lazy"></li><li class="fl rv"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-5.jpg" alt="Biscayne Times" loading="lazy"></li><li class="fl rv d1"><img src="https://www.maidgreen.com/wp-content/uploads/2024/02/logo-3.jpg" alt="Best of the City 2010" loading="lazy"></li></ul>
   </div>
 </section>
 
